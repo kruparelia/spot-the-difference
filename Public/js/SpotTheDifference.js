@@ -63,7 +63,7 @@
 		            $(this).addClass("found");
 		            $(this).css("border", "5px solid white");
 		        });
-		        AddPoints();
+		        that.AddPoints();
 		    }
 		    if(that.numbFound == 3)
 		    {
@@ -78,14 +78,14 @@
 		    var correct = $(this).attr("data-correct");
 		    if(correct == "true")
 		    {
-		        AddPoints();
+		        that.AddPoints();
 		        $(gameCarousel).carousel('next');
 		        $(gameCarousel).carousel('pause');
 		    }
 		    else
 		    {
 		        $(this).prop('checked', false);
-		        MinusPoints();
+		        that.MinusPoints();
             }
 		});
 
