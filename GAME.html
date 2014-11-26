@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -18,14 +18,14 @@
     <link href="Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
     
     <!-- PAGE STYLE SHEET HERE -->
-    <link rel="stylesheet" href="Public/css/ADD-YOUR-STYLES-HERE.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Public/css/mini.drive-john.css" type="text/css" media="screen" />
 
     <!-- MAIN STYLES -->
     <link rel="stylesheet" href="Public/css/mini.ca.css" type="text/css" media="screen" />
      
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="spot-the-difference">
         <div class="clearfix">
         
             <div><!-- MAIN PAGE NAMESPACE -->
@@ -35,24 +35,41 @@
               <div class="carousel-inner">
 			  
 				  
-				  <div class="item active">
-					  <h1>TILE 1</h1>
+				  <div class="item active" style="background-image: url(/Public/img/introscreen.jpg); background-repeat:round">
+					  <h1>Spot the difference</h1>
+                    <input type="text" id="username" placeholder="NAME"/>
+                    <button id="GoButton" class="btn btn-primary">Go</button>
 				  </div>	<!-- END TILE 1 -->  
 			
 				  
-				  <div class="item">
-					  <h1>TILE 2</h1>
+				  <div class="item" >
+					  <h1>SPOT LEVEL 1</h1>
+                    <img src="\Public\img\level1.jpg" style="width:100%;"/>
+                    <div class="spot" data-id="1" style="position:absolute; top:320px; left:40px; width:60px; height:70px; z-index:1;"></div>
+                    <div class="spot" data-id="1" style="position:absolute; top:320px; left:440px; width:60px; height:70px; z-index:1;"></div>
+                    <div class="spot" data-id="2" style="position:absolute; top:330px; left:150px; width:60px; height:70px; z-index:1;"></div>
+                    <div class="spot" data-id="2" style="position:absolute; top:330px; left:550px; width:60px; height:70px; z-index:1;"></div>
+                    <div class="spot" data-id="3" style="position:absolute; top:330px; left:350px; width:60px; height:70px; z-index:1;"></div>
+                    <div class="spot" data-id="3" style="position:absolute; top:330px; left:750px; width:60px; height:70px; z-index:1;"></div>
 				  </div>	<!-- END TILE 2  -->  
 				  
 			   
 				  <div class="item">
-					  <h1>TILE 3</h1>
+					  <h1>QUIZ LEVEL 1</h1>
+					  <h2>HOW MANY DOORS DOES THE NEW MINI 5 DOORS HAVE?</h2>
+                  
+                    <ul>
+                        <li><input type="radio" name="popquiz1" /> 3 DOORS</li>
+                        <li><input type="radio" name="popquiz1" /> 4 DOORS</li>
+                        <li><input type="radio" name="popquiz1" data-correct="true"/> 5 DOORS</li>
+                        <li><input type="radio" name="popquiz1" /> DOORS? LIKE THE BAND?</li>
+                    </ul>
 				  </div>	<!-- END TILE 3  -->  
 				  
 				  
 				  
 				  <div class="item">
-					  <h1>TILE 4</h1>
+					  <h1>ALL FOR NOW!</h1>
 				  </div>	<!-- END TILE 4  -->  
 				  
 			
@@ -63,6 +80,7 @@
 			</div><!-- CLOSE CAROUSEL -->	
            
 			
+            <h2 id="ui-info" hidden>Username: <label id="usernameLabel"></label> | Time: <label id="time"></label> | Points: <label id="points"></label></h2>
 		   </div><!-- END HOME PAGE CONTAINER ( namespace )  -->
             
         </div>
@@ -78,7 +96,7 @@
 	
 	
     <script src="Public/js/vendor/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="Public/js/console.log.js" type="text/javascript" charset="utf-8"></script>
+    <script src="Public/js/plugin/console.log.js" type="text/javascript" charset="utf-8"></script>
 	<script src="Public/js/vendor/mini.swipe.js"></script>
     <script src="Public/js/vendor/bootstrap.min.js"></script>
 	<script src="Public/js/prototype.js"></script>

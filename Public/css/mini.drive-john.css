@@ -1,42 +1,9 @@
-
-
-
-#drive-john-container {
-	position:relative;	
+#spot-the-difference .item{
+		width:800px;
+		height:800px;
+		background-color:black;
 }
-
-#drive-john-p1,
-#drive-john-p2,
-#drive-john-p3{
-	position:relative;
+#spot-the-difference input[type=radio]{
+		width:60px;
+		height:60px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
