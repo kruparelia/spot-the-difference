@@ -1,9 +1,0 @@
-#spot-the-difference .item{
-		width:800px;
-		height:800px;
-		background-color:black;
-}
-#spot-the-difference input[type=radio]{
-		width:60px;
-		height:60px;
-}

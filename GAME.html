@@ -19,10 +19,72 @@
     
     <!-- PAGE STYLE SHEET HERE -->
     <link rel="stylesheet" href="Public/css/mini.drive-john.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Public/css/base.css" type="text/css" media="screen" />
 
     <!-- MAIN STYLES -->
     <link rel="stylesheet" href="Public/css/mini.ca.css" type="text/css" media="screen" />
-     
+     <style>
+         body {
+             background-color: #CDCDCD;
+         }
+         #spot-the-difference .carousel {
+             width: 800px;
+             height: 800px;
+             margin: 0 auto;
+         }
+         #spot-the-difference .carousel-inner {
+             width: 100%;
+             height: 100%;
+         }
+         #spot-the-difference .item {
+             width: 100%;
+             height: 100%;
+             background-color: black;
+             padding: 35px;
+             padding-bottom: 45px;
+         }
+        #spot-the-difference input[type=radio]{
+	        width:60px;
+	        height:60px;
+        }
+         #spot-the-difference .p1-footer {
+             position: absolute;
+             left: 40px;
+             bottom: 60px;
+         }
+         #spot-the-difference .input-name {
+             background-color: black;
+             color: white;
+             height: 40px;
+             width: 400px;
+             border-width: 3px;
+             border-radius: 3px;
+         }
+         #spot-the-difference #ui-info {
+             margin-top: -130px;
+             position: relative;
+         }
+         #spot-the-difference .clock-numbers {
+             height: 65px;
+         }
+         #spot-the-difference .modal {
+             border: 3px solid white;
+             overflow: none;
+             overflow-y: hidden;
+         }
+             #spot-the-difference .modal.page-intro {
+                 width: 50%;
+                 min-width:400px;
+                 height: 350px;
+                 top: 30%;
+                 left: 25%;
+                 border-radius: 20px;
+             }
+                 #spot-the-difference .modal.page-intro h2, #spot-the-difference .modal.page-intro p, #spot-the-difference .modal.page-intro .btn {
+                     margin-left: 30px;
+                     margin-top: 50px;
+                 }
+     </style>
 </head>
 <body>
     <div class="container" id="spot-the-difference">
@@ -33,30 +95,100 @@
 			<!-- MAIN CAROUSEL OPEN TAG -->
 			<div id="carousel-spot-the-difference" class="carousel slide">
               <div class="carousel-inner">
-			  
-				  
+
+                  <!--Intro--> 
 				  <div class="item active" style="background-image: url(/Public/img/introscreen.jpg); background-repeat:round">
-					  <h1>Spot the difference</h1>
-                    <input type="text" id="username" placeholder="NAME"/>
-                    <button id="GoButton" class="btn btn-primary">Go</button>
-				  </div>	<!-- END TILE 1 -->  
+                    <!--How to Play Modal-->
+					<div class="page-intro modal fade" id="Modal-HowToPlay" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" style="height:530px;top:15%;">
+						<div class="close-window clickable"></div>
+						<div class="how">
+							<h2>How to Play.</h2>
+							<p>In this "photo-match" style game, use your mouse to point out differences between two side-by-side picture featuring the New MINI 5 door.</p>
+						</div>
+						<div class="scoring">
+							<h2>Scoring Points.</h2>
+							<ul>
+								<li>Score points by clicking all the photo difference for each level.</li>
+								<li>Score 10 points for every correct answer between 0-10 seconds</li>
+								<li>Score 5 points for every correct answer between 11-20 seconds.</li>
+								<li>Score 3 points for every correct answer between 21-30 seconds</li>
+								<li>Score 1 point for every correct answer after 31 seconds.</li>
+							</ul>
+						</div>
+						<div class="losing">
+							<h2>Losing points.</h2>
+							<ul>
+								<li>Lose 1 point for every incorrect answer.</li>
+							</ul>
+						</div>
+					</div>
+
+					<h1>Spot The Difference.</h1>
+					<h2 class="blue">With the new mini 5 door.</h2>
+					<p>Put your difference-spotting skills to the test in this game starring the New MINI 5 door.</p>
+
+					<div class="p1-footer">
+						<h4>Enter Your Player Name</h4>
+						<input class="input-name" id="username" type="text">
+						<button id="GoButton" class="btn btn btn-md  btn-primary gradient-blue shadow">Start</button>
+						<button id="HowToPlayButton" class="btn btn btn-md  btn-primary gradient-blue shadow">How to Play</button>
+					</div>
+				  </div>
 			
-				  
+				  <!--LEVEL 1 Intro-->
+				  <div class="item">
+                      <img id="Level1IntroScreen" src="/Public/img/level1screen.jpg" style="width:100%; height:100%;"/>
+				  </div>
+
+				  <!--LEVEL 1 SPOT-->
 				  <div class="item" >
-					  <h1>SPOT LEVEL 1</h1>
-                    <img src="\Public\img\level1.jpg" style="width:100%;"/>
-                    <div class="spot" data-id="1" style="position:absolute; top:320px; left:40px; width:60px; height:70px; z-index:1;"></div>
-                    <div class="spot" data-id="1" style="position:absolute; top:320px; left:440px; width:60px; height:70px; z-index:1;"></div>
-                    <div class="spot" data-id="2" style="position:absolute; top:330px; left:150px; width:60px; height:70px; z-index:1;"></div>
-                    <div class="spot" data-id="2" style="position:absolute; top:330px; left:550px; width:60px; height:70px; z-index:1;"></div>
-                    <div class="spot" data-id="3" style="position:absolute; top:330px; left:350px; width:60px; height:70px; z-index:1;"></div>
-                    <div class="spot" data-id="3" style="position:absolute; top:330px; left:750px; width:60px; height:70px; z-index:1;"></div>
+                    <!--Intro Modal-->
+					<div class="page-intro modal fade" id="Modal-StartSpotLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" >
+						<h2>Level 1.</h2>
+						<p>Spot the difference (Hint: There are 3).</p>
+                        <button id="Start-SpotLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow">Play</button>			
+					</div>
+                    <!--Completion Modal-->
+					<div class="page-intro modal fade" id="Modal-EndSpotLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" >
+						<h2>Nice Double-Take!</h2>
+						<p>Get behind the wheel once, and you will realize that the world looks different with the New MINI 5 door.</p>
+                        <button id="End-SpotLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow">Next Level</button>			
+					</div>
+
+                    <img src="\Public\img\level1.jpg" style="width:100%; margin-top:115px;"/>
+                    <div class="spot" data-id="1" style="position:absolute; top:380px; left:62px; width:60px; height:70px; z-index:1;"></div>
+                    <div class="spot" data-id="1" style="position:absolute; top:380px; left:432px; width:60px; height:70px; z-index:1;"></div>
+                    <div class="spot" data-id="2" style="position:absolute; top:380px; left:166px; width:182px; height:95px; z-index:1;"></div>
+                    <div class="spot" data-id="2" style="position:absolute; top:380px; left:536px; width:182px; height:95px; z-index:1;"></div>
+                    <div class="spot" data-id="3" style="position:absolute; top:390px; left:355px; width:45px; height:70px; z-index:1;"></div>
+                    <div class="spot" data-id="3" style="position:absolute; top:390px; left:725px; width:45px; height:70px; z-index:1;"></div>
 				  </div>	<!-- END TILE 2  -->  
 				  
 			   
+				  <!--LEVEL 1 QUIZ-->
 				  <div class="item">
-					  <h1>QUIZ LEVEL 1</h1>
-					  <h2>HOW MANY DOORS DOES THE NEW MINI 5 DOORS HAVE?</h2>
+                    <!--Intro Modal-->
+					<div class="page-intro modal fade" id="Modal-StartQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" >
+						<h2>Pop Quiz, Hot Shot!</h2>
+						<p>Remember multiple choice tests? Well, they're back!</p>
+						<p>Prepare to click on the correct answer.</p>
+                        <button id="Start-QuizLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow">Play</button>			
+					</div>
+                    <!--Incorrect Modal-->
+					<div class="page-intro modal fade" id="Modal-IncorrectQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" >
+						<h2>Incorrect.</h2>
+						<p>Think deeper on this one.</p>
+                        <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal">Have Another Go</button>
+					</div>
+                    <!--Correct Modal-->
+					<div class="page-intro modal fade" id="Modal-EndQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" >
+						<h2>Correct!</h2>
+						<p>The New MINI 5 door has- you guessed it- 5 doors!</p>
+                        <button id="End-QuizLevel1" class="btn btn btn-md btn-primary gradient-blue shadow clickable">Next Level</button>			
+					</div>
+
+					<h1>QUIZ LEVEL 1</h1>
+					<h2>HOW MANY DOORS DOES THE NEW MINI 5 DOORS HAVE?</h2>
                   
                     <ul>
                         <li><input type="radio" name="popquiz1" /> 3 DOORS</li>
@@ -72,15 +204,34 @@
 					  <h1>ALL FOR NOW!</h1>
 				  </div>	<!-- END TILE 4  -->  
 				  
-			
-			  
-			  
-			
 			  </div><!-- CLOSE INNER CAROUSEL -->
+             <!-- FOOTER AREA  -->
+			<div id="ui-info" class="page-bottom" hidden>
+				<div class="left">
+					<div class="mini-logo"><img src="Public/img/minilogo.jpg" alt="Mini Logo"></div>
+					<div class="mini-text">
+						<p class="top">The New Mini.</p>
+						<p class="bottom blue">Now with 5 doors.</p>
+					</div>
+				</div>
+				<div class="right">
+					<div class="player-info">
+						<div class="level"></div>
+						<div class="score"><label id="points"></label></div>
+					</div>
+					<div class="timer"><img class="clock" src="Public/img/colon.jpg" alt=""><img class="clock" id="clock-tens" src="Public/img/clock-0.jpg" alt=""><img class="clock" id="clock-ones" src="Public/img/clock-0.jpg" alt=""></div>
+				</div>
+
+				<div class="right last">
+					<div class="share">
+						<p>Share your Score:</p><a href=""><img src="" alt=""></a>
+					</div>
+				</div>
+			</div>
+
 			</div><!-- CLOSE CAROUSEL -->	
            
 			
-            <h2 id="ui-info" hidden>Username: <label id="usernameLabel"></label> | Time: <label id="time"></label> | Points: <label id="points"></label></h2>
 		   </div><!-- END HOME PAGE CONTAINER ( namespace )  -->
             
         </div>
