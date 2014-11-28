@@ -206,7 +206,7 @@
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartSpotLevel3").modal("show");
 		});
-	    // Level 2 Spot
+	    // Level 3 Spot
 		$("#Start-SpotLevel3").click(function () {
 		    that.startTime = Date.now();
 		    $("#points").text(that.score);
@@ -220,7 +220,52 @@
 		    $("#Modal-EndSpotLevel3").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    that.startTime = Date.now();
-		   // $("#Modal-StartBonusLevel3").modal("show");
+		    $("#Modal-StartBonus1Level3").modal("show");
+		});
+	    // Level 3 Bonus 1
+		$("#Start-Bonus1Level3").click(function () {
+		    $("#Modal-StartBonus1Level3").modal("hide");
+		    that.startTime = Date.now();
+		    that.numbFound = 0;
+		    that.toBeFound = 1;
+		    that.finishFunction = function () { $("#Modal-EndBonus1Level3").modal("show"); };
+		});
+		$("#End-Bonus1Level3").click(function () {
+		    $("#Modal-EndBonus1Level3").modal("hide");
+		    $(gameCarousel).carousel('next');
+		    $("#Modal-StartBonus2Level3").modal("show");
+		});
+	    // Level 3 Bonus 2
+		$("#Start-Bonus2Level3").click(function () {
+		    $("#Modal-StartBonus2Level3").modal("hide");
+		    that.startTime = Date.now();
+		    that.numbFound = 0;
+		    that.toBeFound = 1;
+		    that.finishFunction = function () { $("#Modal-EndBonus2Level3").modal("show"); };
+		});
+		$("#End-Bonus2Level3").click(function () {
+		    $("#Modal-EndBonus2Level3").modal("hide");
+		    $(gameCarousel).carousel('next');
+		    $("#Modal-StartQuizLevel3").modal("show");
+		});
+	    // Level 3 Quiz
+		$("#Start-QuizLevel3").click(function () {
+		    $("#Modal-StartQuizLevel3").modal("hide");
+		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel3").modal("show"); };
+		    that.finishFunction = function () { $("#Modal-EndQuizLevel3").modal("show"); };
+		});
+		$("#End-QuizLevel3").click(function () {
+		    $("#Modal-EndQuizLevel3").modal("hide");
+		    $(gameCarousel).carousel('next');
+		    $(".username").text(that.username);
+		    $(".user-score").text(that.score);
+		});
+	    // Summary Page
+		$("#SubmitToLeaderboard").click(function () {
+		    $(gameCarousel).carousel('next');
+		});
+		$("#SkipToEnd").click(function () {
+		    $(gameCarousel).carousel($('.item').length - 1);
 		});
     },
 	

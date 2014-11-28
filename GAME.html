@@ -111,7 +111,7 @@
                         <div class="item active" style="background-image: url(/Public/img/introscreen.jpg); background-repeat:round">
                             <!--How to Play Modal-->
                             <div class="page-intro modal fade" id="Modal-HowToPlay" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" style="height:530px;top:15%;">
-                                <div class="close-window clickable"></div>
+                                <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal">(X)</button>
                                 <div class="how">
                                     <h2>How to Play.</h2>
                                     <p>In this "photo-match" style game, use your mouse to point out differences between two side-by-side picture featuring the New MINI 5 door.</p>
@@ -197,9 +197,7 @@
                                 <button id="End-QuizLevel1" class="btn btn btn-md btn-primary gradient-blue shadow clickable">Next Level</button>
                             </div>
 
-                            <h1>QUIZ LEVEL 1</h1>
                             <h2>HOW MANY DOORS DOES THE NEW MINI 5 DOORS HAVE?</h2>
-
                             <ul>
                                 <li><input type="radio" name="popquizchoice" /> 3 DOORS</li>
                                 <li><input type="radio" name="popquizchoice" /> 4 DOORS</li>
@@ -226,7 +224,7 @@
                             <div class="spot" data-id="14" style="position:absolute; top:200px; left:230px; width:140px; height:130px; z-index:1;"></div>
                             <div class="spot" data-id="14" style="position:absolute; top:455px; left:230px; width:140px; height:130px; z-index:1;"></div>
 
-                        </div>	<!-- END TILE 4  -->
+                        </div>
                         <!--LEVEL 2 Intro-->
                         <div class="item">
                             <img id="Level2IntroScreen" src="/Public/img/level2screen.jpg" style="width: 100%; height: 660px;" />
@@ -256,8 +254,8 @@
                             <div class="spot" data-id="23" style="position:absolute; top:515px; left:215px; width:265px; height:125px; z-index:1;"></div>
                             <div class="spot" data-id="24" style="position:absolute; top:210px; left:490px; width:135px; height:90px; z-index:1;"></div>
                             <div class="spot" data-id="24" style="position:absolute; top:513px; left:490px; width:135px; height:90px; z-index: 1; "></div>
+                            <div class="spot" data-id="25" style="position:absolute; top:272px; left:630px; width:80px; height:70px; z-index: 1; "></div>
                             <div class="spot" data-id="25" style="position:absolute; top:575px; left:630px; width:80px; height:70px; z-index:1;"></div>
-                            <div class="spot" data-id="25" style="position:absolute; top:878px; left:630px; width:80px; height:70px; z-index: 1; "></div>
                         </div>	<!-- END TILE 2  -->
                         <!--LEVEL 2 BONUS-->
                         <div class="item">
@@ -276,7 +274,7 @@
 
                             <img class="spot-level" src="\Public\img\level2bonus.jpg" style="width:100%;" />
                             <div class="spot" data-id="26" style="position:absolute; top:405px; left:335px; width:200px; height:170px; z-index:1;"></div>
-                        </div>	<!-- END TILE 4  -->
+                        </div>
                         <!--LEVEL 2 QUIZ-->
                         <div class="item">
                             <!--Intro Modal-->
@@ -302,10 +300,10 @@
                             <ul>
                                 <li><input type="radio" name="popquizchoice" /> 27 more litres of cargo space</li>
                                 <li><input type="radio" name="popquizchoice" /> 37 more litres of cargo space</li>
-                                <li><input type="radio" name="popquizchoice" data-correct="true" /> 57 more litres of cargo space</li>
-                                <li><input type="radio" name="popquizchoice" /> 67 more litres of cargo space</li>
+                                <li><input type="radio" name="popquizchoice" /> 57 more litres of cargo space</li>
+                                <li><input type="radio" name="popquizchoice" data-correct="true" /> 67 more litres of cargo space</li>
                             </ul>		
-                        </div>	<!-- END TILE 3  -->
+                        </div>
                     
 
                         <!--LEVEL 3 Intro-->
@@ -339,7 +337,187 @@
                             <div class="spot" data-id="35" style="position:absolute; top:190px; left:660px; width:100px; height:85px; z-index:1;"></div>
                             <div class="spot" data-id="35" style="position:absolute; top:190px; left:280px; width:100px; height:85px; z-index:1;"></div>
                         </div>
+                        
+                        <!--LEVEL 3 BONUS 1-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="page-intro modal fade" id="Modal-StartBonus1Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>Bonus Round!</h2>
+                                <p>Spot the MINI 5 Door.</p>
+                                <button id="Start-Bonus1Level3" class="btn btn btn-md  btn-primary gradient-blue shadow">Play</button>
+                            </div>
+                            <!--Completion Modal-->
+                            <div class="page-intro modal fade" id="Modal-EndBonus1Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>Ta-Door!</h2>
+                                <p>Thanks to its iconic charm, the New MINI 5 door is always front and centre.</p>
+                                <button id="End-Bonus1Level3" class="btn btn btn-md btn-primary gradient-blue shadow clickable">Next Level</button>
+                            </div>
 
+                            <img class="spot-level" src="\Public\img\level3bonus1.jpg" style="width:100%;" />
+                            <div class="spot" data-id="36" style="position:absolute; top:310px; left:290px; width:215px; height:100px; z-index:1;"></div>
+                        </div>
+                        <!--LEVEL 3 BONUS 2-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="page-intro modal fade" id="Modal-StartBonus2Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>Double Bonus Round!</h2>
+                                <p>Can you spot the interior difference?</p>
+                                <button id="Start-Bonus2Level3" class="btn btn btn-md  btn-primary gradient-blue shadow">Play</button>
+                            </div>
+                            <!--Completion Modal-->
+                            <div class="page-intro modal fade" id="Modal-EndBonus2Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>Way to see the light!</h2>
+                                <p>The New MINI 5 door offers premium Ambient Lighting for your backseat crew too.</p>
+                                <button id="End-Bonus2Level3" class="btn btn btn-md btn-primary gradient-blue shadow clickable">Next Level</button>
+                            </div>
+
+                            <img class="spot-level" src="\Public\img\level3bonus2.jpg" style="width:100%;" />
+                            <div class="spot" data-id="37" style="position:absolute; top:390px; left:685px; width:80px; height:120px; z-index:1;"></div>
+                        </div>
+                        <!--LEVEL 3 QUIZ-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="page-intro modal fade" id="Modal-StartQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>THE FINAL TEST.</h2>
+								<p>Prepare to click on the correct answer.</p>
+                                <button id="Start-QuizLevel3" class="btn btn btn-md  btn-primary gradient-blue shadow">Play</button>
+                            </div>
+                            <!--Incorrect Modal-->
+                            <div class="page-intro modal fade" id="Modal-IncorrectQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+								<h2>Yup...but there's so much more.</h2>
+                                <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal">Have Another Go</button>
+                            </div>
+                            <!--Correct Modal-->
+                            <div class="page-intro modal fade" id="Modal-EndQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+								<h2>That's Right!</h2>
+								<p>The New MINI 5 door is the best of every world. The perfect mix of MINI's iconic style and go-kart handling...but in a feisty, flexible, five-door package.</p>
+                                <button id="End-QuizLevel3" class="btn btn btn-md btn-primary gradient-blue shadow clickable">See Your Final Score</button>
+                            </div>
+                            
+                            <h2>What's so good about <span class="blue">the new mini 5 door</span>, anyways?</h2>
+                            <ul>
+                                <li><input type="radio" name="popquizchoice" />Iconic styling</li>
+                                <li><input type="radio" name="popquizchoice" />Legendary go-kart handling</li>
+                                <li><input type="radio" name="popquizchoice" />Two extra doors</li>
+                                <li><input type="radio" name="popquizchoice" />More rear seat legroom</li>
+                                <li><input type="radio" name="popquizchoice" />More cargo space</li>
+                                <li><input type="radio" name="popquizchoice" data-correct="true" />This looks like one of those all-of-the-above questions</li>
+                            </ul>		
+                        </div>
+                    
+                        <!--Final Results-->
+						<div class="item trophy-page">
+							<h2>You Were born to handle this.</h2>
+							<div class="quit">
+								<p>Quit</p>
+								<a class="exit-btn" href="#"></a>
+							</div>
+							<div class="trophy-area"><img src="Public/img/trophy.jpg" alt="" style="width:100%;"></div>
+							<div class="final-score">
+								<div class="user-info username">User</div>
+								Scored:
+								<div class="user-info user-score"></div>
+							</div>
+
+                            <button id="SubmitToLeaderboard" class="btn btn btn-md  btn-primary gradient-blue shadow">Submit to Leaderboard</button>
+                            <button id="SkipToEnd" class="btn btn btn-md  btn-primary gradient-grey shadow">Skip Ahead</button>
+						</div>
+
+                        <!--Leaderboards-->
+                        <div class="item leader-page">
+							<h1>Leaderboard.</h1>
+							<img src="Public/img/minilogo.jpg" alt="">
+							<div class="quit">
+								<p>Quit</p>
+								<a class="exit-btn" href="#"></a>
+							</div>
+							<div class="mini-logo"><img src="" alt=""></div>
+							<div class="board-area">
+								<table class="leaderboard">
+									<tr>
+										<th class="rank-head">Rank</th>
+										<th class="user-head">User</th>
+										<th class="pts-head">Points</th>
+									</tr>
+
+									<tr class= "player-standings">
+										<td class="tb-rank">1.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">10000</td>
+									</tr>
+									<tr class= "player-standings">
+										<td class="tb-rank">2.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">9000</td>
+									</tr>
+									<tr class= "player-standings">
+										<td class="tb-rank">3.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">8000</td>
+									</tr>
+									<tr class= "player-standings">
+										<td class="tb-rank">4.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">7000</td>
+									</tr>
+									<tr class= "player-standings">
+										<td class="tb-rank">5.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">6000</td>
+									</tr>
+									<tr class= "player-standings">
+										<td class="tb-rank">6.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">6000</td>
+									</tr>
+									<tr class= "player-standings">
+										<td class="tb-rank">7.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">6000</td>
+									</tr>
+									<tr class= "player-standings">
+										<td class="tb-rank">8.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">6000</td>
+									</tr>
+									<tr class= "player-standings">
+										<td class="tb-rank">9.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">6000</td>
+									</tr>
+									<tr class= "player-standings">
+										<td class="tb-rank">10.</td>
+										<td class="tb-username">Username</td>
+										<td class="tb-pts">5000</td>
+									</tr>
+								</table>
+							</div>
+
+							<a href="#" class="btn btn btn-md  btn-primary gradient-blue shadow">Next</a>
+						</div>
+                    
+                        <!--End Page-->
+						<div class="item end-page">
+							<h1>Thank you for playing!</h1>
+							<div class="quit">
+								<p>Quit</p>
+								<a class="exit-btn" href="#"></a>
+							</div>
+							<div class="score-box">
+								<div class="user-info username">User</div>
+								Scored:
+								<div class="user-info user-score"></div>
+							</div>
+							<div class="mini-img">
+								<img src="Public/img/endscreen.jpg" alt="">
+								<ul class="actions">
+									<li><a class="btn btn btn-md  btn-primary gradient-blue shadow long">Meet the new MINI 5 Door</a></li>
+									<li><a class="btn btn btn-md  btn-primary gradient-grey shadow">Take a spin</a></li>
+									<li><a class="btn btn btn-md  btn-primary gradient-grey shadow long">Build and price</a></li>
+									<li><a class="btn btn btn-md  btn-primary gradient-grey shadow">Follow the action</a></li>
+								</ul>
+							</div>
+					    </div>
                     </div><!-- CLOSE INNER CAROUSEL -->
                     <!-- FOOTER AREA  -->
                     <div id="ui-info" class="page-bottom" hidden>

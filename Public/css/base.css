@@ -1,3 +1,16 @@
+#spot-the-difference .btn.gradient-blue {
+  background: url("../img/blue-bg.jpg") repeat-x;
+  border: 1px solid #3b5b84; }
+  #spot-the-difference .btn.gradient-blue:before {
+    content: url("../img/blue-arr.png");
+    margin-right: 10px;
+    margin-top: 3px; }
+#spot-the-difference .btn.gradient-grey {
+  background: url("../img/grey-bg.jpg") repeat-x; }
+  #spot-the-difference .btn.gradient-grey:before {
+    background: url("../img/grey-arr.jpg") no-repeat;
+    margin-right: 10px;
+    margin-top: 3px; }
 #spot-the-difference .page-bottom {
   width: 100%;
   height: 130px;
@@ -52,3 +65,81 @@
         margin-right: 5px; }
     #spot-the-difference .page-bottom .right.last {
       display: none; }
+		
+#spot-the-difference .trophy-page {
+  position: relative; }
+  #spot-the-difference .trophy-page h1 {
+    font-size: 3.5em;
+    width: 85%;
+    margin: 0 auto;
+    display: block; }
+  #spot-the-difference .trophy-page .trophy-area {
+    width: 100%;
+    margin: 0 auto; }
+    #spot-the-difference .trophy-page .trophy-area img {
+      width: 100%;
+      height: 100%;
+      border: 0; }
+  #spot-the-difference .trophy-page .final-score {
+    width: 100%;
+    font-size: 2em;
+    text-transform: uppercase; }
+    #spot-the-difference .trophy-page .final-score .user-info {
+      display: inline-block; }
+    #spot-the-difference .trophy-page .final-score .user-score {
+      width: 200px;
+      height: 50px;
+      border: 2px solid white; }
+#spot-the-difference .leader-page .board-area {
+  width: 100%;
+  margin-bottom: 50px; }
+  #spot-the-difference .leader-page .board-area .leaderboard {
+    background: black;
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 10px; }
+    #spot-the-difference .leader-page .board-area .leaderboard tr th {
+      font-size: 2em;
+      text-transform: uppercase; }
+    #spot-the-difference .leader-page .board-area .leaderboard tr .rank-head {
+      width: 8%; }
+    #spot-the-difference .leader-page .board-area .leaderboard tr .user-head {
+      width: 50%;
+      text-align: center; }
+    #spot-the-difference .leader-page .board-area .leaderboard tr .pts-head {
+      width: 20%;
+      text-align: center; }
+    #spot-the-difference .leader-page .board-area .leaderboard .player-standings {
+      font-size: 1.7em;
+      margin-top: 10px; }
+      #spot-the-difference .leader-page .board-area .leaderboard .player-standings .tb-username,
+      #spot-the-difference .leader-page .board-area .leaderboard .player-standings .tb-pts {
+        background: #6f6f6f;
+        padding-left: 50px; }
+#spot-the-difference .end-page .score-box {
+  width: 100%;
+  font-size: 2em;
+  text-transform: uppercase; }
+  #spot-the-difference .end-page .score-box .user-info {
+    display: inline-block; }
+  #spot-the-difference .end-page .score-box .user-score {
+    width: 200px;
+    height: 50px;
+    border: 2px solid white; }
+#spot-the-difference .end-page .mini-img {
+  position: relative;
+  width: 100%; }
+  #spot-the-difference .end-page .mini-img img {
+    width: 100%; }
+  #spot-the-difference .end-page .mini-img ul.actions {
+    position: absolute;
+    bottom: 30px; }
+    #spot-the-difference .end-page .mini-img ul.actions li {
+      list-style-type: none;
+      float: left;
+      width: 40%; }
+		
+  #spot-the-difference .item .quit {
+    position: absolute;
+    right: 0;
+    top: 0; }
