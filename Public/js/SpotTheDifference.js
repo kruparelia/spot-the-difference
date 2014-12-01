@@ -282,7 +282,7 @@
 		            $(gameCarousel).carousel('next');
 		        },
 		        error: function (jqXHR, textStatus, errorThrown) {
-		            alert(jqXHR.responseText + ": " + textStatus + ". " + errorThrown);
+		            //alert(jqXHR.responseText + ": " + textStatus + ". " + errorThrown);
 		            $(this).prop("disabled", false);
 		            $(this).text(initialText);
 		        }
@@ -290,6 +290,10 @@
 		});
 		$("#SkipAhead").click(function () {
 		    that.GetLeaderboardData();
+		    $(gameCarousel).carousel('next');
+		});
+        // Leaderboards
+		$("#LB-Next").click(function () {
 		    $(gameCarousel).carousel('next');
 		});
 

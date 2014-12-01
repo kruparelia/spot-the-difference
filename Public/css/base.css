@@ -1,86 +1,60 @@
 /*Lyman's Code (some tweeked)*/
-#spot-the-difference .btn.gradient-blue { background: url("../img/blue-bg.jpg") repeat-x; border: 1px solid #3b5b84; }
 
-		#spot-the-difference .btn.gradient-blue:before { content: url("../img/blue-arr.png"); margin-right: 10px; margin-top: 3px; }
+#spot-the-difference .quit { position: absolute; top: 0; right: 0; }
+		#spot-the-difference .quit span { text-transform: uppercase; margin-right: 5px; font-size: 1.1em; font-weight: 500; }
+		#spot-the-difference .quit a img { height: 30px; width: 30px; }
 
-#spot-the-difference .btn.gradient-grey { background: url("../img/grey-bg.jpg") repeat-x; border: 1px solid #3b5b84; }
-
-		#spot-the-difference .btn.gradient-grey:before { content: url("../img/grey-arr.jpg"); margin-right: 10px; margin-top: 3px; }
+#spot-the-difference .btn { position: relative; font-size: 14px; padding: 8px; }
+		#spot-the-difference .btn img.btn-arrow { margin-right: 10px; }
+		#spot-the-difference .btn.gradient-blue { background: url("../img/blue-bg.jpg") repeat-x; border: 1px solid #3b5b84; }
+		#spot-the-difference .btn.gradient-grey { background: url("../img/grey-bg.jpg") repeat-x; text-shadow: 1px 1px 2px #000000;}
 
 #spot-the-difference .page-bottom { width: 100%; height: 130px; padding: 10px 0; background-color: black; }
-
 		#spot-the-difference .page-bottom .left { width: 55%; float: left; }
-
 				#spot-the-difference .page-bottom .left .mini-logo { float: left; width: 150px; margin-right: 30px; }
-
 						#spot-the-difference .page-bottom .left .mini-logo img { width: 160px; padding-left: 35px; }
-
 				#spot-the-difference .page-bottom .left .mini-text { float: left; width: calc(100% - (189px + 30px)); text-transform: uppercase; font-size: 1.5em; margin: 0; margin-top: 5px; line-height: 1; font-weight: 600; }
-
 						#spot-the-difference .page-bottom .left .mini-text p { margin: inherit; }
 
 		#spot-the-difference .page-bottom .right { width: 45%; float: left; }
-
 				#spot-the-difference .page-bottom .right .player-info { width: 50%; float: left; }
-
 						#spot-the-difference .page-bottom .right .player-info .level, #spot-the-difference .page-bottom .right .player-info .score { width: 100%; text-transform: uppercase; font-size: 1.25em; font-weight: 500; }
-
 						#spot-the-difference .page-bottom .right .player-info .level { margin-top: 15px; margin-bottom: 15px; }
-
 								#spot-the-difference .page-bottom .right .player-info .level:before { content: "level:"; margin-right: 5px; }
-
 						#spot-the-difference .page-bottom .right .player-info .score:before { content: "score:"; margin-right: 5px; }
-
 				#spot-the-difference .page-bottom .right .timer { width: 50%; float: right; height: 88px; }
-
 						#spot-the-difference .page-bottom .right .timer .clock { margin-right: 5px; }
-
 				#spot-the-difference .page-bottom .right.last { display: none; }
+				
 
 #spot-the-difference .trophy-page {  }
-
 		#spot-the-difference .trophy-page h1 { font-size: 3.5em; width: 85%; margin: 0 auto; display: block; }
-
 		#spot-the-difference .trophy-page .trophy-area { width: 100%; margin: 0 auto; }
-
 				#spot-the-difference .trophy-page .trophy-area img { width: 100%; height: 100%; border: 0; }
-
-		#spot-the-difference .trophy-page .final-score { width: 100%; font-size: 2em; text-transform: uppercase; }
-
-				#spot-the-difference .trophy-page .final-score .user-info { display: inline-block; }
-
-				#spot-the-difference .trophy-page .final-score .user-score { width: 200px; height: 50px; border: 2px solid white; }
-
+		#spot-the-difference .trophy-page .user-score { font-size: 2em; text-transform: uppercase; width: 200px; height: 50px; border: 2px solid white; text-align: center; line-height: 46px; display: inline-block; margin-left: 14px; }
+		#spot-the-difference .trophy-page .userscored-div { font-size: 2em; min-width: 245px; position: relative; height: 50px; line-height: 50px;}
+		#spot-the-difference .trophy-page #SubmitToLeaderboard {margin-top:-10px;}
 #spot-the-difference .leader-page .board-area { width: 100%; margin-bottom: 10px; }
-
 		#spot-the-difference .leader-page .board-area .leaderboard { background: black; width: 90%; border-collapse: separate; border-spacing: 10px; }
-
 				#spot-the-difference .leader-page .board-area .leaderboard tr th { font-size: 2em; text-transform: uppercase; }
-
 				#spot-the-difference .leader-page .board-area .leaderboard tr .rank-head { width: 8%; }
-
 				#spot-the-difference .leader-page .board-area .leaderboard tr .user-head { width: 50%; text-align: center; }
-
 				#spot-the-difference .leader-page .board-area .leaderboard tr .pts-head { width: 20%; text-align: center; }
-
 				#spot-the-difference .leader-page .board-area .leaderboard .player-standings { font-size: 1.3em; margin-top: 10px; }
-
 						#spot-the-difference .leader-page .board-area .leaderboard .player-standings .tb-username,
 						#spot-the-difference .leader-page .board-area .leaderboard .player-standings .tb-pts { background: #6f6f6f; padding-left: 50px; }
 
 #spot-the-difference .end-page .score-box { width: 100%; font-size: 2em; text-transform: uppercase; }
-
-		#spot-the-difference .end-page .score-box .user-info { display: inline-block; }
-
-		#spot-the-difference .end-page .score-box .user-score { width: 200px; height: 50px; border: 2px solid white; }
-
+		#spot-the-difference .end-page .score-box .user-score { width: 200px; height: 50px; border: 2px solid white; text-align:center;}
+		
+#spot-the-difference .end-page .final-score { width: 100%; font-size: 2em; text-transform: uppercase; }
+#spot-the-difference .end-page .user-score { width: 200px; height: 50px; border: 2px solid white; text-align:center; float: left; line-height: 46px;}
+#spot-the-difference .end-page .userscored-div {display: inline; min-width: 245px; position: relative; height: 50px;float: left; line-height: 50px;}
 #spot-the-difference .end-page .mini-img { position: relative; width: 100%; }
-
 		#spot-the-difference .end-page .mini-img img { width: 100%; }
-
-		#spot-the-difference .end-page .mini-img ul.actions { position: absolute; bottom: 30px; }
-
-				#spot-the-difference .end-page .mini-img ul.actions li { list-style-type: none; float: left; width: 40%; }
+#spot-the-difference .end-page .actions { position: absolute; bottom: 30px; }
+		#spot-the-difference .end-page .actions li { list-style-type: none; float: left; width: 40%; margin-right: 10%; margin-bottom: 20px; }
+		#spot-the-difference .end-page .actions li a{ width:100%; text-align: left;}
 
 #spot-the-difference .item .quit { position: absolute; right: 0; top: 0; }
 
@@ -93,6 +67,7 @@
 						#spot-the-difference .quiz-area ul li input[type='radio']:checked ~ label { background: url("../img/checked.jpg") no-repeat; background-position: center left; background-size: contain; color: #02aee7; }
 
 /*Jonathan's Code*/
+#spot-the-difference .start-button{margin-right:10px;}
 #spot-the-difference { background-color: #000; }
 #spot-the-difference .carousel { width: 800px; height: 800px; margin: 0 auto; }
 #spot-the-difference .carousel-inner { width: 100%; height: 100%; }
@@ -114,7 +89,6 @@
 				#spot-the-difference .modal.page-intro h2, #spot-the-difference .modal.page-intro .btn { margin-left: 30px; margin-top: 50px; }
 				#spot-the-difference .modal.page-intro .close-button { position: absolute; right: 10px; top: 15px; width: 32px; }
 #spot-the-difference .levelintro-image {width: 100%; height: 660px;}
-#spot-the-difference .userscored-div {display: inline-block; min-width: 245px; position: relative; vertical-align: text-bottom; height: 50px;}
 
 #spot-the-difference .spot {position:absolute; z-index:1;}
 #spot-the-difference .spot-11a {top:380px; left:62px; width:60px; height:70px;}
@@ -151,4 +125,5 @@
 #spot-the-difference .spot-35b {top:190px; left:280px; width:100px; height:85px;}
 
 #spot-the-difference .spot-36 {top:310px; left:290px; width:215px; height:100px;}
-#spot-the-difference .spot-37 {top:390px; left:685px; width:80px; height:120px;}
+#spot-the-difference .spot-37a {top:390px; left:35px; width:80px; height:120px;}
+#spot-the-difference .spot-37b {top:390px; left:685px; width:80px; height:120px;}
