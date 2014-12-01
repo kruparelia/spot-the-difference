@@ -52,14 +52,14 @@
 		var gameCarousel = $("#carousel-spot-the-difference");
 		$("#carousel-spot-the-difference").carousel('pause');
 		
-		$("body").keydown(function (e) {
-		    if (e.keyCode == 37) { // left
-		        $(gameCarousel).carousel('prev');
-		    }
-		    else if (e.keyCode == 39) { // right
-		        $(gameCarousel).carousel('next');
-		    }
-		});
+		//$("body").keydown(function (e) {
+		//    if (e.keyCode == 37) { // left
+		//        $(gameCarousel).carousel('prev');
+		//    }
+		//    else if (e.keyCode == 39) { // right
+		//        $(gameCarousel).carousel('next');
+		//    }
+		//});
 
 		$(".spot").click(function () {
 		    var id = $(this).attr("data-id");
@@ -272,11 +272,27 @@
 		});
 	    // Summary Page
 		$("#SubmitToLeaderboard").click(function () {
+		    var initialText = $(this).text();
+		    $(this).text("Loading");
+		    $(this).prop("disabled", true);
+		    $.ajax({
+		        url: "http://php.richmondday.com/mini.ca/spot-the-difference-api/Save.php?User=" + that.username + "&Score=" + that.score, type: "POST",
+		        success: function () {
+		            that.GetLeaderboardData();
+		            $(gameCarousel).carousel('next');
+		        },
+		        error: function (jqXHR, textStatus, errorThrown) {
+		            alert(jqXHR.responseText + ": " + textStatus + ". " + errorThrown);
+		            $(this).prop("disabled", false);
+		            $(this).text(initialText);
+		        }
+		    });
+		});
+		$("#SkipAhead").click(function () {
+		    that.GetLeaderboardData();
 		    $(gameCarousel).carousel('next');
 		});
-		$("#SkipToEnd").click(function () {
-		    $(gameCarousel).carousel($('.item').length - 1);
-		});
+
     },
 	
 	/**
@@ -300,8 +316,48 @@
 	MinusPoints : function () {
 		this.score -= 1;
 		$("#points").text(this.score);
-	}
+	},
 	
+	/**
+	GET LEADERBOARD DATA
+	*/
+	GetLeaderboardData : function () {
+	    var html = "";
+	    html += "<tr class= 'player-standings'>";
+	    html += "<td class='tb-rank' colspan='3'>Loading Data...</td>";
+	    html += "</tr>";
+	    $("#lbTable tr:not(#lbHeaderRow)").remove();
+	    $("#lbHeaderRow").after(html);
+	    html = "";
+	    $.getJSON("http://php.richmondday.com/mini.ca/spot-the-difference-api/api/api.php?action=get_top_10")
+          .done(function (json) {
+              var leaderboardData = json;
+              if (leaderboardData.length == 0) {
+                  html += "<tr class= 'player-standings'>";
+                  html += "<td class='tb-rank' colspan='3'>No data.</td>";
+                  html += "</tr>";
+              }
+              else {
+                  $.each(leaderboardData, function (key, value) {
+                      html += "<tr class= 'player-standings'>";
+                      html += "<td class='tb-rank'>" + (key + 1) + ".</td>";
+                      html += "<td class='tb-username'>" + value.User + "</td>";
+                      html += "<td class='tb-pts'>" + value.Score + "</td>";
+                      html += "</tr>";
+                  });
+              }
+              $("#lbTable tr:not(#lbHeaderRow)").remove();
+              $("#lbHeaderRow").after(html);
+          })
+          .fail(function (jqxhr, textStatus, error) {
+              var err = textStatus + ", " + error;
+              html += "<tr class= 'player-standings'>";
+              html += "<td class='tb-rank' colspan='3'>Error occurred.</td>";
+              html += "</tr>";
+              $("#lbTable tr:not(#lbHeaderRow)").remove();
+              $("#lbHeaderRow").after(html);
+        });
+	}
 	 
      
   };

@@ -123,14 +123,16 @@
                                 <p>The New MINI 5 door has- you guessed it- 5 doors!</p>
                                 <button id="End-QuizLevel1" class="btn btn btn-md btn-primary gradient-blue shadow clickable">Next Level</button>
                             </div>
-
-                            <h2>HOW MANY DOORS DOES THE NEW MINI 5 DOORS HAVE?</h2>
-                            <ul>
-                                <li><input type="radio" name="popquizchoice" /> 3 DOORS</li>
-                                <li><input type="radio" name="popquizchoice" /> 4 DOORS</li>
-                                <li><input type="radio" name="popquizchoice" data-correct="true" /> 5 DOORS</li>
-                                <li><input type="radio" name="popquizchoice" /> DOORS? LIKE THE BAND?</li>
-                            </ul>
+                        
+							<div class="quiz-area">
+								<h2>How many doors does<br /><span class="blue">the new mini 5 door</span> have?</h2>
+								<ul>
+									<li><input type="radio" id ='qc1' name='popquizchoice' ><label for="qc1">3 doors</label></li>
+									<li><input type="radio" id ='qc2' name='popquizchoice' ><label for="qc2">4 doors</label></li>
+									<li><input type="radio" id ='qc3' name='popquizchoice' data-correct="true"><label for="qc3">5 doors</label></li>
+									<li><input type="radio" id ='qc4' name='popquizchoice' ><label for="qc4">6 doors</label></li>
+								</ul>				  		
+							</div>
                         </div>	<!-- END TILE 3  -->
                         <!--LEVEL 1 BONUS-->
                         <div class="item">
@@ -223,13 +225,15 @@
                                 <button id="End-QuizLevel2" class="btn btn btn-md btn-primary gradient-blue shadow clickable">Next Level</button>
                             </div>
 
-                            <h2>In comparison to the mini 3 door, how many more litres of cargo space does <span class="blue">the new mini 5 door have?</span></h2>
-                            <ul>
-                                <li><input type="radio" name="popquizchoice" /> 27 more litres of cargo space</li>
-                                <li><input type="radio" name="popquizchoice" /> 37 more litres of cargo space</li>
-                                <li><input type="radio" name="popquizchoice" /> 57 more litres of cargo space</li>
-                                <li><input type="radio" name="popquizchoice" data-correct="true" /> 67 more litres of cargo space</li>
-                            </ul>		
+							<div class="quiz-area">
+                                <h2>In comparison to the mini 3 door, how many more litres of cargo space does<br /><span class="blue">the new mini 5 door</span> have?</h2>
+								<ul>
+									<li><input type="radio" id ='qc5' name='popquizchoice' ><label for="qc5">27 more litres of cargo space</label></li>
+									<li><input type="radio" id ='qc6' name='popquizchoice' ><label for="qc6">37 more litres of cargo space</label></li>
+									<li><input type="radio" id ='qc7' name='popquizchoice' ><label for="qc7">57 more litres of cargo space</label></li>
+									<li><input type="radio" id ='qc8' name='popquizchoice' data-correct="true"><label for="qc8">67 more litres of cargo space</label></li>
+								</ul>				  		
+							</div>
                         </div>
                     
 
@@ -321,15 +325,18 @@
                                 <button id="End-QuizLevel3" class="btn btn btn-md btn-primary gradient-blue shadow clickable">See Your Final Score</button>
                             </div>
                             
-                            <h2>What's so good about <span class="blue">the new mini 5 door</span>, anyways?</h2>
-                            <ul>
-                                <li><input type="radio" name="popquizchoice" />Iconic styling</li>
-                                <li><input type="radio" name="popquizchoice" />Legendary go-kart handling</li>
-                                <li><input type="radio" name="popquizchoice" />Two extra doors</li>
-                                <li><input type="radio" name="popquizchoice" />More rear seat legroom</li>
-                                <li><input type="radio" name="popquizchoice" />More cargo space</li>
-                                <li><input type="radio" name="popquizchoice" data-correct="true" />This looks like one of those all-of-the-above questions</li>
-                            </ul>		
+
+							<div class="quiz-area">	
+                                <h2>What's so good about<br /><span class="blue">the new mini 5 door</span>, anyways?</h2>
+								<ul>
+									<li><input type="radio" id ='qc9' name='popquizchoice' ><label for="qc9">Iconic styling</label></li>
+									<li><input type="radio" id ='qc10' name='popquizchoice' ><label for="qc10">Legendary go-kart handling</label></li>
+									<li><input type="radio" id ='qc11' name='popquizchoice' ><label for="qc11">Two extra doors</label></li>
+									<li><input type="radio" id ='qc12' name='popquizchoice' ><label for="qc12">More rear seat legroom</label></li>
+									<li><input type="radio" id ='qc13' name='popquizchoice' ><label for="qc13">More cargo space</label></li>
+									<li><input type="radio" id ='qc14' name='popquizchoice' data-correct="true" ><label for="qc14">This looks like one of those all-of-the-above questions</label></li>
+								</ul>				  		
+							</div>
                         </div>
                     
                         <!--Final Results-->
@@ -350,7 +357,7 @@
                             <button id="SubmitToLeaderboard" class="btn btn btn-md  btn-primary gradient-blue shadow">Submit to Leaderboard</button>
                             <br />
                             <br />
-                            <button id="SkipToEnd" class="btn btn btn-md btn-primary gradient-grey shadow">Skip Ahead</button>
+                            <button id="SkipAhead" class="btn btn btn-md btn-primary gradient-grey shadow">Skip Ahead</button>
 						</div>
 
                         <!--Leaderboards-->
@@ -362,63 +369,13 @@
 							</div>
 							<div class="mini-logo"><img src="" alt=""></div>
 							<div class="board-area">
-								<table class="leaderboard">
-									<tr>
+								<table id="lbTable" class="leaderboard">
+									<tr id="lbHeaderRow">
 										<th class="rank-head">Rank</th>
 										<th class="user-head">User</th>
 										<th class="pts-head">Points</th>
 									</tr>
 
-									<tr class= "player-standings">
-										<td class="tb-rank">1.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">10000</td>
-									</tr>
-									<tr class= "player-standings">
-										<td class="tb-rank">2.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">9000</td>
-									</tr>
-									<tr class= "player-standings">
-										<td class="tb-rank">3.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">8000</td>
-									</tr>
-									<tr class= "player-standings">
-										<td class="tb-rank">4.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">7000</td>
-									</tr>
-									<tr class= "player-standings">
-										<td class="tb-rank">5.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">6000</td>
-									</tr>
-									<tr class= "player-standings">
-										<td class="tb-rank">6.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">6000</td>
-									</tr>
-									<tr class= "player-standings">
-										<td class="tb-rank">7.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">6000</td>
-									</tr>
-									<tr class= "player-standings">
-										<td class="tb-rank">8.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">6000</td>
-									</tr>
-									<tr class= "player-standings">
-										<td class="tb-rank">9.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">6000</td>
-									</tr>
-									<tr class= "player-standings">
-										<td class="tb-rank">10.</td>
-										<td class="tb-username">Username</td>
-										<td class="tb-pts">5000</td>
-									</tr>
 								</table>
 							</div>
 

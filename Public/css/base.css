@@ -84,13 +84,19 @@
 
 #spot-the-difference .item .quit { position: absolute; right: 0; top: 0; }
 
+#spot-the-difference .quiz-area { margin-top: 15%; }
+		#spot-the-difference .quiz-area h2 { margin-bottom: 40px; }
+		#spot-the-difference .quiz-area ul { margin: 0; padding: 0; }
+				#spot-the-difference .quiz-area ul li { list-style-type: none; margin: -10px 0; font-size: 24px; }
+						#spot-the-difference .quiz-area ul li input[type='radio'] { visibility: hidden; }
+						#spot-the-difference .quiz-area ul li label { width: 100%; padding-left: 45px; background: url("../img/unchecked.jpg") no-repeat; background-position: center left; background-size: contain; }
+						#spot-the-difference .quiz-area ul li input[type='radio']:checked ~ label { background: url("../img/checked.jpg") no-repeat; background-position: center left; background-size: contain; color: #02aee7; }
+
 /*Jonathan's Code*/
 #spot-the-difference { background-color: #000; }
 #spot-the-difference .carousel { width: 800px; height: 800px; margin: 0 auto; }
 #spot-the-difference .carousel-inner { width: 100%; height: 100%; }
 #spot-the-difference .item { width: 100%; height: 100%; background-color: black; padding: 35px; padding-bottom: 45px; }
-
-#spot-the-difference input[type=radio] { width: 60px; height: 60px; }
 
 #spot-the-difference .p1-footer { position: absolute; left: 40px; bottom: 60px; }
 
