@@ -102,6 +102,7 @@
 		        that.username = $("#username").val();
 		        $("#usernameLabel").text(that.username);
 		        $(gameCarousel).carousel('next');
+		        $(".level").text("1");
             }
 		});
 		$("#HowToPlayButton").click(function () {
@@ -127,12 +128,13 @@
 		$("#End-SpotLevel1").click(function () {
 		    $("#Modal-EndSpotLevel1").modal("hide");
 		    $(gameCarousel).carousel('next');
-		    that.startTime = Date.now();
 		    $("#Modal-StartQuizLevel1").modal("show");
+		    $(".level").text("QUIZ");
 		});
 
 	    // Level 1 Quiz
 		$("#Start-QuizLevel1").click(function () {
+		    that.startTime = Date.now();
 		    $("#Modal-StartQuizLevel1").modal("hide");
 		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel1").modal("show"); };
 		    that.finishFunction = function () { $("#Modal-EndQuizLevel1").modal("show"); };
@@ -141,6 +143,7 @@
 		    $("#Modal-EndQuizLevel1").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartBonusLevel1").modal("show");
+		    $(".level").text("BONUS");
 		});
 
 	    // Level 1 Bonus
@@ -154,6 +157,7 @@
 		$("#End-BonusLevel1").click(function () {
 		    $("#Modal-EndBonusLevel1").modal("hide");
 		    $(gameCarousel).carousel('next');
+		    $(".level").text("2");
 		});
 
 	    // Level 2 Intro Screen
@@ -174,13 +178,13 @@
 		$("#End-SpotLevel2").click(function () {
 		    $("#Modal-EndSpotLevel2").modal("hide");
 		    $(gameCarousel).carousel('next');
-		    that.startTime = Date.now();
 		    $("#Modal-StartBonusLevel2").modal("show");
+		    $(".level").text("BONUS");
 		});
 	    // Level 2 Bonus
 		$("#Start-BonusLevel2").click(function () {
-		    $("#Modal-StartBonusLevel2").modal("hide");
 		    that.startTime = Date.now();
+		    $("#Modal-StartBonusLevel2").modal("hide");
 		    that.numbFound = 0;
 		    that.toBeFound = 1;
 		    that.finishFunction = function () { $("#Modal-EndBonusLevel2").modal("show"); };
@@ -189,9 +193,11 @@
 		    $("#Modal-EndBonusLevel2").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartQuizLevel2").modal("show");
+		    $(".level").text("QUIZ");
 		});
 	    // Level 2 Quiz
 		$("#Start-QuizLevel2").click(function () {
+		    that.startTime = Date.now();
 		    $("#Modal-StartQuizLevel2").modal("hide");
 		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel2").modal("show"); };
 		    that.finishFunction = function () { $("#Modal-EndQuizLevel2").modal("show"); };
@@ -199,6 +205,7 @@
 		$("#End-QuizLevel2").click(function () {
 		    $("#Modal-EndQuizLevel2").modal("hide");
 		    $(gameCarousel).carousel('next');
+		    $(".level").text("3");
 		});
 
 	    // Level 3 Intro Screen
@@ -219,8 +226,8 @@
 		$("#End-SpotLevel3").click(function () {
 		    $("#Modal-EndSpotLevel3").modal("hide");
 		    $(gameCarousel).carousel('next');
-		    that.startTime = Date.now();
 		    $("#Modal-StartBonus1Level3").modal("show");
+		    $(".level").text("BONUS");
 		});
 	    // Level 3 Bonus 1
 		$("#Start-Bonus1Level3").click(function () {
@@ -247,9 +254,11 @@
 		    $("#Modal-EndBonus2Level3").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartQuizLevel3").modal("show");
+		    $(".level").text("FINAL QUIZ");
 		});
 	    // Level 3 Quiz
 		$("#Start-QuizLevel3").click(function () {
+		    that.startTime = Date.now();
 		    $("#Modal-StartQuizLevel3").modal("hide");
 		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel3").modal("show"); };
 		    that.finishFunction = function () { $("#Modal-EndQuizLevel3").modal("show"); };
@@ -259,6 +268,7 @@
 		    $(gameCarousel).carousel('next');
 		    $(".username").text(that.username);
 		    $(".user-score").text(that.score);
+		    $("#player-ui").hide();
 		});
 	    // Summary Page
 		$("#SubmitToLeaderboard").click(function () {
