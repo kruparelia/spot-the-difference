@@ -46,8 +46,8 @@
 		        tens = 0;
 		    }
 
-		    $("#clock-ones").attr("src", "/Public/img/clock-" + ones + ".jpg");
-		    $("#clock-tens").attr("src", "/Public/img/clock-" + tens + ".jpg");
+		    $("#clock-ones").attr("src", "Public/img/clock-" + ones + ".jpg");
+		    $("#clock-tens").attr("src", "Public/img/clock-" + tens + ".jpg");
 		}, 100);
 		var gameCarousel = $("#carousel-spot-the-difference");
 		$("#carousel-spot-the-difference").carousel('pause');
@@ -78,7 +78,7 @@
 		$(".spot-level").click(function (e) {
 		    var x = e.pageX - 24;
 		    var y = e.pageY - 24;
-		    $("body").append("<img class='xmark' src='/Public/img/x-mark.png' style='position:absolute; top:" + y + "px; left:" + x + "px;' />");
+		    $("body").append("<img class='xmark' src='Public/img/x-mark.png' style='position:absolute; top:" + y + "px; left:" + x + "px;' />");
 		    setTimeout(function () { $(".xmark").remove(); }, 500);
 		    that.MinusPoints();
 		});
