@@ -52,7 +52,7 @@
 #spot-the-difference .end-page .userscored-div {display: inline; min-width: 245px; position: relative; height: 50px;float: left; line-height: 50px;}
 #spot-the-difference .end-page .mini-img { position: relative; width: 100%; }
 		#spot-the-difference .end-page .mini-img img { width: 100%; }
-#spot-the-difference .end-page .actions { position: absolute; bottom: 30px; }
+#spot-the-difference .end-page .actions { position: absolute; bottom: 195px; }
 		#spot-the-difference .end-page .actions li { list-style-type: none; float: left; width: 40%; margin-right: 10%; margin-bottom: 20px; }
 		#spot-the-difference .end-page .actions li a{ width:100%; text-align: left;}
 
