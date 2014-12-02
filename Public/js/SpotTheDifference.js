@@ -5,18 +5,18 @@
  var SpotTheDifference = MINIStandalone.SpotTheDifference = (function() {
 	
  function SpotTheDifference() {
-	    
-	    // class globals 
-		this.score = 0;
-		this.username = "";
-		this.numbFound = 0;
-		this.toBeFound = 10;
-		this.startTime = Date.now();
-		this.time = this.startTime;
-		this.finishFunction = function () { };
-		this.incorrectFunction = function () { };
-        // INIT 
-		this.initalize();
+    // class globals 
+    this.saved = false;
+    this.score = 0;
+    this.username = "";
+    this.numbFound = 0;
+    this.toBeFound = 10;
+    this.startTime = Date.now();
+    this.time = this.startTime;
+    this.finishFunction = function () { };
+    this.incorrectFunction = function () { };
+    // INIT 
+    this.initalize();
   }
   
   
@@ -290,20 +290,25 @@
 	    // Summary Page
 		$("#SubmitToLeaderboard").click(function () {
 		    var initialText = $(this).text();
-		    $(this).text("Loading");
-		    $(this).prop("disabled", true);
-		    $.ajax({
-		        url: "http://php.richmondday.com/mini.ca/spot-the-difference-api/Save.php?User=" + that.username + "&Score=" + that.score, type: "POST",
-		        success: function () {
-		            that.GetLeaderboardData();
-		            $(gameCarousel).carousel('next');
-		        },
-		        error: function (jqXHR, textStatus, errorThrown) {
-		            //alert(jqXHR.responseText + ": " + textStatus + ". " + errorThrown);
-		            $(this).prop("disabled", false);
-		            $(this).text(initialText);
-		        }
-		    });
+		    $("#SubmitToLeaderboard").text("Loading");
+		    $("#SubmitToLeaderboard").prop("disabled", true);
+		    if (!that.saved)
+		    {
+		        that.saved = true;
+		        $.ajax({
+		            url: "http://php.richmondday.com/mini.ca/spot-the-difference-api/Save.php?User=" + that.username + "&Score=" + that.score, type: "POST",
+		            success: function () {
+		                that.GetLeaderboardData();
+		                $(gameCarousel).carousel('next');
+		            },
+		            error: function (jqXHR, textStatus, errorThrown) {
+		                //alert(jqXHR.responseText + ": " + textStatus + ". " + errorThrown);
+		                $("#SubmitToLeaderboard").prop("disabled", false);
+		                $(this).text(initialText);
+		                that.saved = false;
+		            }
+		        });
+		    }
 		});
 		$("#SkipAhead").click(function () {
 		    that.GetLeaderboardData();
