@@ -55,14 +55,14 @@
 		var gameCarousel = $("#carousel-spot-the-difference");
 		$("#carousel-spot-the-difference").carousel('pause');
 		
-		//$("body").keydown(function (e) {
-		//    if (e.keyCode == 37) { // left
-		//        $(gameCarousel).carousel('prev');
-		//    }
-		//    else if (e.keyCode == 39) { // right
-		//        $(gameCarousel).carousel('next');
-		//    }
-		//});
+		$("body").keydown(function (e) {
+		    if (e.keyCode == 37) { // left
+		        $(gameCarousel).carousel('prev');
+		    }
+		    else if (e.keyCode == 39) { // right
+		        $(gameCarousel).carousel('next');
+		    }
+		});
 
 		$(".spot").click(function () {
 		    var id = $(this).attr("data-id");
@@ -70,7 +70,6 @@
 		        that.numbFound++;
 		        $(".spot[data-id='" + id + "']").each(function () {
 		            $(this).addClass("found");
-		            $(this).css("border", "5px solid white");
 		        });
 		        that.AddPoints();
 		    }

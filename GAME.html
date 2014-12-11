@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="Public/css/mini.ca.css" type="text/css" media="screen" />
 </head>
 <body>
-    <div class="container" id="spot-the-difference">
+    <div id="spot-the-difference">
         <div class="clearfix">
 
             <div>
@@ -37,7 +37,7 @@
                         <div class="item active" style="background-image: url(Public/img/introscreen.jpg); background-repeat:round">
                             <h1>Spot The Difference.</h1>
                             <h2 class="blue">With the new MINI 5 door.</h2>
-                            <p>Put your difference-spotting skills to the test in this game starring the New MINI 5 door.</p>
+                            <p>Put your difference-spotting skills to the test in this game<br/>starring the New MINI 5 door.</p>
 
                             <div class="p1-footer">
                                 <h4>Enter Your Player Name</h4>
@@ -54,19 +54,19 @@
                                 </div>
                                 <div class="scoring">
                                     <h2 class="blue">Scoring Points.</h2>
-                                    <ul>
-                                        <li>Score points by clicking all the photo differences for each level.</li>
-                                        <li>Score 10 points for every correct answer between 0-10 seconds</li>
-                                        <li>Score 5 points for every correct answer between 11-20 seconds.</li>
-                                        <li>Score 3 points for every correct answer between 21-30 seconds</li>
-                                        <li>Score 1 point for every correct answer after 31 seconds.</li>
-                                    </ul>
+                                    <p>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Score points by clicking all the photo differences for each level.<br/>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Score 10 points for every correct answer between 0-10 seconds.<br/>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Score 5 points for every correct answer between 11-20 seconds.<br/>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Score 3 points for every correct answer between 21-30 seconds.<br/>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Score 1 point for every correct answer after 31 seconds.
+                                    </p>
                                 </div>
                                 <div class="losing">
                                     <h2 class="blue">Losing points.</h2>
-                                    <ul>
-                                        <li>Lose 1 point for every incorrect answer.</li>
-                                    </ul>
+                                    <p>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Lose 1 point for every incorrect answer.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -79,19 +79,19 @@
                         <!--LEVEL 1 SPOT-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartSpotLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal modal-center fade" id="Modal-StartSpotLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Level 1.</h2>
                                 <p>Spot the difference (Hint: There are 3).</p>
                                 <button id="Start-SpotLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Completion Modal-->
-                            <div class="corner modal fade" id="Modal-EndSpotLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-corner modal fade" id="Modal-EndSpotLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Nice Double-Take!</h2>
                                 <p>Get behind the wheel once, and you will realize that the world looks different with the New MINI 5 door.</p>
                                 <button id="End-SpotLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img class="spot-level" src="Public/img/level1spot.jpg" style="width:100%; margin-top:115px;" />
+                            <img id="spot-level1" class="spot-level" src="Public/img/level1spot.jpg" />
                             <div class="spot spot-11a" data-id="11"></div>
                             <div class="spot spot-11b" data-id="11"></div>
                             <div class="spot spot-12a" data-id="12"></div>
@@ -102,7 +102,7 @@
                         <!--LEVEL 1 QUIZ-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-StartQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Pop Quiz, Hot Shot!</h2>
                                 <p>
                                     Remember multiple choice tests? Well, they're back!<br/>
@@ -111,13 +111,13 @@
                                 <button id="Start-QuizLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Incorrect Modal-->
-                            <div class=" modal fade" id="Modal-IncorrectQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-IncorrectQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Incorrect.</h2>
                                 <p>Think deeper on this one.</p>
                                 <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Have Another Go</button>
                             </div>
                             <!--Correct Modal-->
-                            <div class=" modal fade" id="Modal-EndQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-EndQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Correct!</h2>
                                 <p>The New MINI 5 door has- you guessed it- 5 doors!</p>
                                 <button id="End-QuizLevel1" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
@@ -129,26 +129,26 @@
 									<li><input type="radio" id ='qc1' name='popquizchoice' ><label for="qc1">3 doors</label></li>
 									<li><input type="radio" id ='qc2' name='popquizchoice' ><label for="qc2">4 doors</label></li>
 									<li><input type="radio" id ='qc3' name='popquizchoice' data-correct="true"><label for="qc3">5 doors</label></li>
-									<li><input type="radio" id ='qc4' name='popquizchoice' ><label for="qc4">6 doors</label></li>
+									<li><input type="radio" id ='qc4' name='popquizchoice' ><label for="qc4">Doors? Like, the band?</label></li>
 								</ul>				  		
 							</div>
                         </div>	<!-- END TILE 3  -->
                         <!--LEVEL 1 BONUS-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartBonusLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-StartBonusLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Bonus Round!</h2>
                                 <p>Can you spot the difference?</p>
                                 <button id="Start-BonusLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Completion Modal-->
-                            <div class="corner modal fade" id="Modal-EndBonusLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-corner modal fade" id="Modal-EndBonusLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Way to go...Kart!</h2>
                                 <p>The New MINI 5 door has 2 extra doors that open up to a spacious rear-seat bench.</p>
                                 <button id="End-BonusLevel1" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img class="spot-level" src="Public/img/level1bonus.jpg" style="width:100%;" />
+                            <img class="spot-level" src="Public/img/level1bonus.jpg" />
                             <div class="spot spot-14a" data-id="14"></div>
                             <div class="spot spot-14b" data-id="14"></div>
 
@@ -161,13 +161,13 @@
                         <!--LEVEL 2 SPOT-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartSpotLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-StartSpotLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Level 2.</h2>
                                 <p>Spot the difference (Hint: There are 5).</p>
                                 <button id="Start-SpotLevel2" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Completion Modal-->
-                            <div class="corner modal fade" id="Modal-EndSpotLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-corner modal fade" id="Modal-EndSpotLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>GREATE MOTOR SKILLS!</h2>
                                 <p>They'll surely come in handy when you're harnessing the New MINI 5 door's ultra nimble go-kart handling.</p>
                                 <button id="End-SpotLevel2" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
@@ -188,37 +188,37 @@
                         <!--LEVEL 2 BONUS-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartBonusLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-StartBonusLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
 								<h2>Bonus Round!</h2>
 								<p>There's a new MINI 5 door hiding. Can you find it?</p>
                                 <button id="Start-BonusLevel2" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Completion Modal-->
-                            <div class="corner modal fade" id="Modal-EndBonusLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
-								<h3>You know how to pick 'em!</h3>
+                            <div class="modal-corner modal fade" id="Modal-EndBonusLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+								<h2>You know how to pick 'em!</h2>
 								<p>With so many exterior colours and customization options to choose from, standing out from the crowd is easy with the New MINI 5 door.</p>
                                 <button id="End-BonusLevel2" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img class="spot-level" src="Public/img/level2bonus.jpg" style="width:100%;" />
+                            <img class="spot-level" src="Public/img/level2bonus.jpg" />
                             <div class="spot spot-26" data-id="26"></div>
                         </div>
                         <!--LEVEL 2 QUIZ-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartQuizLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-StartQuizLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Pop Quiz, Hot Shot!</h2>
 								<p>Prepare to click on the correct answer.</p>
                                 <button id="Start-QuizLevel2" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Incorrect Modal-->
-                            <div class=" modal fade" id="Modal-IncorrectQuizLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-IncorrectQuizLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Incorrect.</h2>
 								<p>You're gonna have to go bigger than that.</p>
                                 <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Have Another Go</button>
                             </div>
                             <!--Correct Modal-->
-                            <div class=" modal fade" id="Modal-EndQuizLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-EndQuizLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Correct!</h2>
 								<p>The New MINI 5 door has 67 more litres of cargo space than the MINI 3 door. Now you can bring along 4 pals, and all their stuff.</p>
                                 <button id="End-QuizLevel2" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
@@ -243,19 +243,19 @@
                         <!--LEVEL 3 SPOT-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartSpotLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-StartSpotLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Level 3.</h2>
                                 <p>Spot the difference (Hint: There are 5).</p>
                                 <button id="Start-SpotLevel3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Completion Modal-->
-                            <div class="corner modal fade" id="Modal-EndSpotLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-corner modal fade" id="Modal-EndSpotLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
 								<h2>You're pretty fast!</h2>
 								<p>Your need for speed is the perfect match for the New MINI 5 door's Twin Power Turbo Engine, which gets you from 0-100 km/h in a mere 6.8 seconds.</p>
                                 <button id="End-SpotLevel3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img class="spot-level" src="Public/img/level3spot.jpg" style="width:100%;" />
+                            <img class="spot-level" src="Public/img/level3spot.jpg" />
                             <div class="spot spot-31a" data-id="31" ></div>
                             <div class="spot spot-31b" data-id="31" ></div>
                             <div class="spot spot-32a" data-id="32" ></div>
@@ -271,13 +271,13 @@
                         <!--LEVEL 3 BONUS 1-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartBonus1Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-StartBonus1Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Bonus Round!</h2>
                                 <p>Spot the MINI 5 Door.</p>
                                 <button id="Start-Bonus1Level3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Completion Modal-->
-                            <div class="corner modal fade" id="Modal-EndBonus1Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-corner modal fade" id="Modal-EndBonus1Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Ta-Door!</h2>
                                 <p>Thanks to its iconic charm, the New MINI 5 door is always front and centre.</p>
                                 <button id="End-Bonus1Level3" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
@@ -289,37 +289,37 @@
                         <!--LEVEL 3 BONUS 2-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartBonus2Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-StartBonus2Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Double Bonus Round!</h2>
                                 <p>Can you spot the interior difference?</p>
                                 <button id="Start-Bonus2Level3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Completion Modal-->
-                            <div class="corner modal fade" id="Modal-EndBonus2Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-corner modal fade" id="Modal-EndBonus2Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>Way to see the light!</h2>
                                 <p>The New MINI 5 door offers premium Ambient Lighting for your backseat crew too.</p>
                                 <button id="End-Bonus2Level3" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img class="spot-level" src="Public/img/level3bonus2.jpg" style="width:100%;" />
+                            <img class="spot-level" src="Public/img/level3bonus2.jpg"/>
                             <div class="spot spot-37a" data-id="37"></div>
                             <div class="spot spot-37b" data-id="37"></div>
                         </div>
                         <!--LEVEL 3 QUIZ-->
                         <div class="item">
                             <!--Intro Modal-->
-                            <div class=" modal fade" id="Modal-StartQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-StartQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <h2>THE FINAL TEST.</h2>
 								<p>Prepare to click on the correct answer.</p>
                                 <button id="Start-QuizLevel3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
                             </div>
                             <!--Incorrect Modal-->
-                            <div class=" modal fade" id="Modal-IncorrectQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-IncorrectQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
 								<h2>Yup...but there's so much more.</h2>
                                 <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Have Another Go</button>
                             </div>
                             <!--Correct Modal-->
-                            <div class=" modal fade" id="Modal-EndQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-center modal fade" id="Modal-EndQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
 								<h2>That's Right!</h2>
 								<p>The New MINI 5 door is the best of every world. The perfect mix of MINI's iconic style and go-kart handling...but in a feisty, flexible, five-door package.</p>
                                 <button id="End-QuizLevel3" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">See Your Final Score</button>
@@ -344,7 +344,7 @@
 							<h2>You Were born to handle this.</h2>
 							<div class="trophy-area"><img src="Public/img/trophy.jpg" alt="" style="width:100%;"></div>
                             <div class="userscored-div">
-                                <span class="username">User</span> Scored:
+                                <span class="username">USERNAME</span> SCORED:
                             </div>
                             <button id="SubmitToLeaderboard" class="btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Submit to Leaderboard</button>
 							<div class="user-score">0</div>
@@ -384,10 +384,10 @@
 								<img src="Public/img/endscreen.jpg" alt="">
 							</div>
 							<ul class="actions">
-								<li><a href="#" class="btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Meet the new MINI 5 Door</a></li>
-								<li><a href="#" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Take a spin</a></li>
-								<li><a href="#" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Build and price</a></li>
-								<li><a href="#" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Follow the action</a></li>
+								<li class="long"><a href="#" class="btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Meet the new MINI 5 Door</a></li>
+								<li class="short"><a href="#" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Take a spin</a></li>
+								<li class="long"><a href="#" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Build and price</a></li>
+								<li class="short"><a href="#" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Follow the action</a></li>
 							</ul>
 					    </div>
                     </div><!-- CLOSE INNER CAROUSEL -->
@@ -401,11 +401,11 @@
                             </div>
                         </div>
                         <div id="player-ui" class="right">
+                            <div class="timer"><img class="clock" src="Public/img/colon.jpg" alt=""><img class="clock" id="clock-tens" src="Public/img/clock-0.jpg" alt=""><img class="clock" id="clock-ones" src="Public/img/clock-0.jpg" alt=""></div>
                             <div class="player-info">
                                 <div class="level"></div>
-                                <div class="score"><label id="points"></label></div>
+                                <div class="score"><span id="points"></span></div>
                             </div>
-                            <div class="timer"><img class="clock" src="Public/img/colon.jpg" alt=""><img class="clock" id="clock-tens" src="Public/img/clock-0.jpg" alt=""><img class="clock" id="clock-ones" src="Public/img/clock-0.jpg" alt=""></div>
                         </div>
                         <div class="right last">
                             <div class="share">
