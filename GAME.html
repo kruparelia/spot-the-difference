@@ -16,13 +16,14 @@
 
     <!-- Bootstrap -->
     <link href="Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    
+    <!-- MAIN STYLES -->
+    <link rel="stylesheet" href="Public/css/mini.ca.css" type="text/css" media="screen" />
 
     <!-- PAGE STYLE SHEET HERE -->
     <link rel="stylesheet" href="Public/css/mini.drive-john.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="Public/css/base.css" type="text/css" media="screen" />
 
-    <!-- MAIN STYLES -->
-    <link rel="stylesheet" href="Public/css/mini.ca.css" type="text/css" media="screen" />
 </head>
 <body>
     <div id="spot-the-difference">
@@ -34,19 +35,20 @@
                 <div id="carousel-spot-the-difference" class="carousel slide">
                     <div class="carousel-inner">
                         <!--Intro-->
-                        <div class="item active" style="background-image: url(Public/img/introscreen.jpg); background-repeat:round">
+                        <div class="intro-page item active" >
                             <h1>Spot The Difference.</h1>
                             <h2 class="blue">With the new MINI 5 door.</h2>
                             <p>Put your difference-spotting skills to the test in this game<br/>starring the New MINI 5 door.</p>
-
+                            <img class="car-image" src="/Public/img/introscreen-mobile.jpg" />
                             <div class="p1-footer">
                                 <h4>Enter Your Player Name</h4>
                                 <input class="input-name" id="username" type="text">
                                 <button id="GoButton" class="start-button btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Start</button>
+                                <div class="mobile-only btn-space"></div>
                                 <button id="HowToPlayButton" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">How to Play</button>
                             </div>
                             <!--How to Play Modal-->
-                            <div class="page-intro modal fade" id="Modal-HowToPlay" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                            <div class="howtoplay modal fade" id="Modal-HowToPlay" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
                                 <img src="Public/img/close.png" data-dismiss="modal" class="close-button" />
                                 <div class="how">
                                     <h2 class="blue">How to Play.</h2>
@@ -91,7 +93,8 @@
                                 <button id="End-SpotLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img id="spot-level1" class="spot-level" src="Public/img/level1spot.jpg" />
+                            <img id="spot-level1" class="spot-level" src="/Public/img/level1spot.jpg" />
+                            <img id="spot-level1-mobile" class="spot-level mobile-only" src="/Public/img/level1spot-mobile.jpg" />
                             <div class="spot spot-11a" data-id="11"></div>
                             <div class="spot spot-11b" data-id="11"></div>
                             <div class="spot spot-12a" data-id="12"></div>
@@ -148,7 +151,8 @@
                                 <button id="End-BonusLevel1" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img class="spot-level" src="Public/img/level1bonus.jpg" />
+                            <img id="bonus-level1" class="spot-level" src="Public/img/level1bonus.jpg" />
+                            <img id="bonus-level1-mobile" class="spot-level mobile-only" src="Public/img/level1bonus-mobile.jpg" />
                             <div class="spot spot-14a" data-id="14"></div>
                             <div class="spot spot-14b" data-id="14"></div>
 
@@ -168,12 +172,13 @@
                             </div>
                             <!--Completion Modal-->
                             <div class="modal-corner modal fade" id="Modal-EndSpotLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
-                                <h2>GREATE MOTOR SKILLS!</h2>
+                                <h2>GREAT MOTOR SKILLS!</h2>
                                 <p>They'll surely come in handy when you're harnessing the New MINI 5 door's ultra nimble go-kart handling.</p>
                                 <button id="End-SpotLevel2" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img class="spot-level" src="Public/img/level2spot.jpg" style="width:100%;" />
+                            <img id="spot-level2" class="spot-level" src="Public/img/level2spot.jpg" style="width:100%;" />
+                            <img id="spot-level2-mobile" class="spot-level mobile-only" src="/Public/img/level2spot-mobile.jpg" />
                             <div class="spot spot-21a" data-id="21" ></div>
                             <div class="spot spot-21b" data-id="21" ></div>
                             <div class="spot spot-22a" data-id="22" ></div>
@@ -255,7 +260,8 @@
                                 <button id="End-SpotLevel3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img class="spot-level" src="Public/img/level3spot.jpg" />
+                            <img id="spot-level3" class="spot-level" src="Public/img/level3spot.jpg" />
+                            <img id="spot-level3-mobile" class="spot-level mobile-only" src="/Public/img/level3spot-mobile.jpg" />
                             <div class="spot spot-31a" data-id="31" ></div>
                             <div class="spot spot-31b" data-id="31" ></div>
                             <div class="spot spot-32a" data-id="32" ></div>
@@ -301,7 +307,8 @@
                                 <button id="End-Bonus2Level3" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Next Level</button>
                             </div>
 
-                            <img class="spot-level" src="Public/img/level3bonus2.jpg"/>
+                            <img id="bonus2-level3" class="spot-level" src="Public/img/level3bonus2.jpg"/>
+                            <img id="bonus2-level3-mobile" class="spot-level mobile-only" src="/Public/img/level3bonus2-mobile.jpg" />
                             <div class="spot spot-37a" data-id="37"></div>
                             <div class="spot spot-37b" data-id="37"></div>
                         </div>
@@ -315,7 +322,8 @@
                             </div>
                             <!--Incorrect Modal-->
                             <div class="modal-center modal fade" id="Modal-IncorrectQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
-								<h2>Yup...but there's so much more.</h2>
+								<h3>Yup...but there's so much more.</h3>
+                                <p></p>
                                 <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Have Another Go</button>
                             </div>
                             <!--Correct Modal-->
@@ -355,7 +363,7 @@
 
                         <!--Leaderboards-->
                         <div class="item leader-page">
-							<h1>Leaderboard.<img src="Public/img/minilogo.jpg" alt="" style="height: 48px; float:right;"></h1>
+							<h1>Leaderboard.<img class="mini-logo" src="Public/img/minilogo.jpg" alt=""></h1>
 							<div class="mini-logo"><img src="" alt=""></div>
 							<div class="board-area">
 								<table id="lbTable" class="leaderboard">
@@ -373,10 +381,10 @@
                     
                         <!--End Page-->
 						<div class="item end-page">
-							<h1>Thank you for playing!</h1>
+							<h1>Thank you<br class="mobile-only" />for playing!</h1>
 							<div class="final-score">
                                 <p class="userscored-div">
-                                    <span class="username">User</span> Scored:
+                                    <span class="username">User</span><br class="mobile-only" /> Scored:
                                 </p>
 								<div class="user-score">0</div>
 							</div>
@@ -401,7 +409,7 @@
                             </div>
                         </div>
                         <div id="player-ui" class="right">
-                            <div class="timer"><img class="clock" src="Public/img/colon.jpg" alt=""><img class="clock" id="clock-tens" src="Public/img/clock-0.jpg" alt=""><img class="clock" id="clock-ones" src="Public/img/clock-0.jpg" alt=""></div>
+                            <div class="timer"><img class="clock-colon" src="Public/img/colon.jpg" alt=""><img class="clock" id="clock-tens" src="Public/img/clock-0.jpg" alt=""><img class="clock" id="clock-ones" src="Public/img/clock-0.jpg" alt=""></div>
                             <div class="player-info">
                                 <div class="level"></div>
                                 <div class="score"><span id="points"></span></div>
