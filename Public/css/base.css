@@ -6,6 +6,7 @@ body{margin-top: 0px; background-color:lightgray; }
 
 #spot-the-difference h1 { font-size:66px; }
 #spot-the-difference h2 { font-size:46px; }
+#spot-the-difference .modal.modal-center h3 { font-size:32px;  }
 #spot-the-difference h4 { font-size:36px; }
 #spot-the-difference p { font-size:28px; }
 #spot-the-difference .intro-page { background-image: url(../img/introscreen.jpg); background-repeat:round }
@@ -307,7 +308,7 @@ body{margin-top: 0px; background-color:lightgray; }
 						#spot-the-difference .modal.howtoplay .close-button { width: 28px; }
 				#spot-the-difference .modal.modal-center { left: 21%; right: 21%; }
 						#spot-the-difference .modal.modal-center h2 { font-size:26px;  margin-top: 20px; margin-bottom: 15px; }
-						#spot-the-difference .modal.modal-center h3 { font-size:24px;  }
+						#spot-the-difference .modal.modal-center h3 { font-size:19px;  }
 						#spot-the-difference .modal.modal-center p { min-height: 40px; font-size: 14px; line-height: 14px; }
 				#spot-the-difference .modal.modal-corner { }
 						#spot-the-difference .modal.modal-corner h2 { font-size:20px; margin-top: 20px; margin-bottom: 15px; }
@@ -487,7 +488,7 @@ body{margin-top: 0px; background-color:lightgray; }
 		#spot-the-difference .end-page .score-box { width: 100%; font-size: 2em; text-transform: uppercase; }
 				#spot-the-difference .end-page .score-box .user-score { width: 200px; height: 50px; border: 2px solid white; text-align:center;}
 		#spot-the-difference .end-page .final-score { padding-left: 0px;}
-		#spot-the-difference .end-page .user-score { line-height: 35px; position: relative; width: 100px; top: 3px; left: -90px; font-size: 25px;}
+		#spot-the-difference .end-page .user-score { line-height: 35px; position: relative; width: 100px; top: 3px; left: -35px; font-size: 25px;}
 		#spot-the-difference .end-page .userscored-div { font-size: 14px; margin-top: 10px; line-height:1;}
 		#spot-the-difference .end-page .mini-img img { top: 50px; }
 		#spot-the-difference .end-page .actions { bottom: 80px; left: 0px; padding-left: 15px;}
