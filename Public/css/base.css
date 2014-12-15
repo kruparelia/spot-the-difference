@@ -50,7 +50,7 @@ body{margin-top: 0px; background-color:lightgray; }
 		#spot-the-difference .quiz-area h2 { margin-bottom: 40px; }
 		#spot-the-difference .quiz-area ul { margin: 0; padding: 0; }
 				#spot-the-difference .quiz-area ul li { list-style-type: none; margin: 10px 0; font-size: 34px; }
-						#spot-the-difference .quiz-area ul li input[type='radio'] { visibility: hidden; width: 0px; height: 0px; }
+						#spot-the-difference .quiz-area ul li input[type='radio'] { display: none; width: 0px; height: 0px; }
 						#spot-the-difference .quiz-area ul li label { width: 100%; padding-left: 65px; background: url("../img/unchecked.jpg") no-repeat; background-position: center left; background-size: contain; }
 						#spot-the-difference .quiz-area ul li input[type='radio']:checked ~ label { background: url("../img/checked.jpg") no-repeat; background-position: center left; background-size: contain; color: #02aee7; }
 
