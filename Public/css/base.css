@@ -142,8 +142,8 @@ body{margin-top: 0px; background-color:lightgray; }
 #spot-the-difference .spot-35b {top:270px; left:995px; width:165px; height:140px;}
 
 #spot-the-difference .spot-36 {top:440px; left:410px; width:370px; height:180px;}
-#spot-the-difference .spot-37a {top:385px; left:450px; width:145px; height:390px;}
-#spot-the-difference .spot-37b {top:385px; left:1015px; width:150px; height:390px;}
+#spot-the-difference .spot-37a {top:385px; left:450px; width:145px; height:450px;}
+#spot-the-difference .spot-37b {top:385px; left:1015px; width:150px; height:450px;}
 
 @media (max-width: 1150px),(max-height: 1150px) {
 		#spot-the-difference .carousel { width: 900px; height: 900px; }
@@ -284,8 +284,8 @@ body{margin-top: 0px; background-color:lightgray; }
 		#spot-the-difference .spot-35b {top:210px; left:735px; width:130px; height:105px;}
 
 		#spot-the-difference .spot-36 {top:340px; left:310px; width:275px; height:125px;}
-		#spot-the-difference .spot-37a {top:300px; left:340px; width:107px; height:275px;}
-		#spot-the-difference .spot-37b {top:300px; left:760px; width:107px; height:275px;}
+		#spot-the-difference .spot-37a {top:300px; left:340px; width:107px; height:324px;}
+		#spot-the-difference .spot-37b {top:300px; left:760px; width:107px; height:324px;}
 }
 @media (max-width: 950px),(max-height: 950px) {
 		#spot-the-difference .carousel { width: 700px; height: 700px; }
