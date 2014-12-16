@@ -13,6 +13,9 @@
     this.toBeFound = 10;
     this.startTime = Date.now();
     this.time = this.startTime;
+	this.translations = [];
+	this.language = 'fr';
+	
     this.finishFunction = function () { };
     this.incorrectFunction = function () { };
     // INIT 
@@ -29,6 +32,18 @@
 		
 		// declare scope obj
 		var that = this;
+		
+		
+		this.translations = [{'en':'BONUS','fr':'BONUS-FR'},{'en':'QUIZ','fr':'QUIZ-FR'},{'en':'FINAL QUIZ','fr':'FINAL QUIZ - fr'}];
+		
+		// BONUS       = this.translations[0][this.language];
+		// QUIZ        = this.translations[1][this.language];
+		// FINAL QUIZ  = this.translations[2][this.language];
+		
+		console.log(this.translations[0][this.language]);
+		console.log(this.translations[1][this.language]);
+		console.log(this.translations[2][this.language]);
+		
 		
 		var levelIntroTime = 2000;
 		var isPaused = true;
