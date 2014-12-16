@@ -8,6 +8,7 @@
     // class globals 
     this.saved = false;
     this.score = 0;
+    this.level = "Intro Page";
     this.username = "";
     this.numbFound = 0;
     this.toBeFound = 10;
@@ -72,6 +73,7 @@
 		            $(this).addClass("found");
 		        });
 		        that.AddPoints();
+		        that.Tracking(that.level + ": spot click " + id);
 		    }
 		    if (that.numbFound == that.toBeFound) {
 		        isPaused = true;
@@ -84,8 +86,10 @@
 		    $("body").append("<img class='xmark' src='Public/img/x-mark.png' style='position:absolute; top:" + y + "px; left:" + x + "px;' />");
 		    setTimeout(function () { $(".xmark").remove(); }, 500);
 		    that.MinusPoints();
+		    that.Tracking(that.level + ": wrong spot click ");
 		});
 		$("input[name='popquizchoice']").click(function () {
+		    that.Tracking(that.level + ": " + $("label[for='" + $(this).attr("id") + "']").text());
 		    var correct = $(this).attr("data-correct");
 		    if (correct == "true") {
 		        that.AddPoints();
@@ -103,9 +107,11 @@
 		$("#GoButton").click(function () {
 		    if ($('#username').val() != "")
 		    {
+		        that.Tracking(that.level + ": Go button");
 		        that.username = $("#username").val();
 		        $("#usernameLabel").text(that.username);
 		        $(gameCarousel).carousel('next');
+		        that.level = "Level 1, spot";
 		        $(".level").text("1");
 		        setTimeout(function () {
 		            $(gameCarousel).carousel('next');
@@ -114,6 +120,7 @@
             }
 		});
 		$("#HowToPlayButton").click(function () {
+		    that.Tracking(that.level + ": HowToPlayButton");
 		    $("#Modal-HowToPlay").modal("show");
 		});
 
@@ -121,6 +128,7 @@
 
 	    // Level 1 Spot
 		$("#Start-SpotLevel1").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    that.startTime = Date.now();
 		    $("#points").text(that.score);
 		    $("#ui-info").show();
@@ -131,14 +139,17 @@
 		    isPaused = false;
 		});
 		$("#End-SpotLevel1").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndSpotLevel1").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartQuizLevel1").modal("show");
+		    that.level = "Level 1, quiz";
 		    $(".level").text("QUIZ");
 		});
 
 	    // Level 1 Quiz
 		$("#Start-QuizLevel1").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    that.startTime = Date.now();
 		    $("#Modal-StartQuizLevel1").modal("hide");
 		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel1").modal("show"); };
@@ -146,14 +157,17 @@
 		    isPaused = false;
 		});
 		$("#End-QuizLevel1").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndQuizLevel1").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartBonusLevel1").modal("show");
+		    that.level = "Level 1, bonus";
 		    $(".level").text("BONUS");
 		});
 
 	    // Level 1 Bonus
 		$("#Start-BonusLevel1").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    $("#Modal-StartBonusLevel1").modal("hide");
 		    that.startTime = Date.now();
 		    that.numbFound = 0;
@@ -162,8 +176,10 @@
 		    isPaused = false;
 		});
 		$("#End-BonusLevel1").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndBonusLevel1").modal("hide");
 		    $(gameCarousel).carousel('next');
+		    that.level = "Level 2, spot";
 		    $(".level").text("2");
 		    setTimeout(function () {
 		        $(gameCarousel).carousel('next');
@@ -175,6 +191,7 @@
 
 	    // Level 2 Spot
 		$("#Start-SpotLevel2").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    that.startTime = Date.now();
 		    $("#points").text(that.score);
 		    $("#ui-info").show();
@@ -185,13 +202,16 @@
 		    isPaused = false;
 		});
 		$("#End-SpotLevel2").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndSpotLevel2").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartBonusLevel2").modal("show");
+		    that.level = "Level 2, bonus";
 		    $(".level").text("BONUS");
 		});
 	    // Level 2 Bonus
 		$("#Start-BonusLevel2").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    that.startTime = Date.now();
 		    $("#Modal-StartBonusLevel2").modal("hide");
 		    that.numbFound = 0;
@@ -200,13 +220,16 @@
 		    isPaused = false;
 		});
 		$("#End-BonusLevel2").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndBonusLevel2").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartQuizLevel2").modal("show");
+		    that.level = "Level 2, quiz";
 		    $(".level").text("QUIZ");
 		});
 	    // Level 2 Quiz
 		$("#Start-QuizLevel2").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    that.startTime = Date.now();
 		    $("#Modal-StartQuizLevel2").modal("hide");
 		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel2").modal("show"); };
@@ -214,8 +237,10 @@
 		    isPaused = false;
 		});
 		$("#End-QuizLevel2").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndQuizLevel2").modal("hide");
 		    $(gameCarousel).carousel('next');
+		    that.level = "Level 3, spot";
 		    $(".level").text("3");
 		    setTimeout(function () {
 		        $(gameCarousel).carousel('next');
@@ -227,6 +252,7 @@
 
 	    // Level 3 Spot
 		$("#Start-SpotLevel3").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    that.startTime = Date.now();
 		    $("#points").text(that.score);
 		    $("#ui-info").show();
@@ -237,13 +263,16 @@
 		    isPaused = false;
 		});
 		$("#End-SpotLevel3").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndSpotLevel3").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartBonus1Level3").modal("show");
+		    that.level = "Level 3, bonus 1";
 		    $(".level").text("BONUS");
 		});
 	    // Level 3 Bonus 1
 		$("#Start-Bonus1Level3").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    $("#Modal-StartBonus1Level3").modal("hide");
 		    that.startTime = Date.now();
 		    that.numbFound = 0;
@@ -252,12 +281,15 @@
 		    isPaused = false;
 		});
 		$("#End-Bonus1Level3").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndBonus1Level3").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartBonus2Level3").modal("show");
+		    that.level = "Level 3, bonus 2";
 		});
 	    // Level 3 Bonus 2
 		$("#Start-Bonus2Level3").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    $("#Modal-StartBonus2Level3").modal("hide");
 		    that.startTime = Date.now();
 		    that.numbFound = 0;
@@ -266,13 +298,16 @@
 		    isPaused = false;
 		});
 		$("#End-Bonus2Level3").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndBonus2Level3").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartQuizLevel3").modal("show");
+		    that.level = "Level 3, quiz";
 		    $(".level").text("FINAL QUIZ");
 		});
 	    // Level 3 Quiz
 		$("#Start-QuizLevel3").click(function () {
+		    that.Tracking(that.level + ": Start");
 		    that.startTime = Date.now();
 		    $("#Modal-StartQuizLevel3").modal("hide");
 		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel3").modal("show"); };
@@ -280,14 +315,18 @@
 		    isPaused = false;
 		});
 		$("#End-QuizLevel3").click(function () {
+		    that.Tracking(that.level + ": End");
 		    $("#Modal-EndQuizLevel3").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $(".username").text(that.username);
 		    $(".user-score").text(that.score);
 		    $("#player-ui").hide();
+		    that.level = "Score Page";
 		});
 	    // Summary Page
 		$("#SubmitToLeaderboard").click(function () {
+		    that.Tracking(that.level + ": Submit Score");
+		    that.level = "Leaderboards";
 		    var initialText = $(this).text();
 		    $("#SubmitToLeaderboard").text("Loading");
 		    $("#SubmitToLeaderboard").prop("disabled", true);
@@ -310,11 +349,15 @@
 		    }
 		});
 		$("#SkipAhead").click(function () {
+		    that.Tracking(that.level + ": Skip Ahead");
+		    that.level = "Leaderboards";
 		    that.GetLeaderboardData();
 		    $(gameCarousel).carousel('next');
 		});
         // Leaderboards
 		$("#LB-Next").click(function () {
+		    that.Tracking(that.level + ": Go");
+		    that.level = "End Page";
 		    $(gameCarousel).carousel('next');
 		});
 
@@ -342,6 +385,14 @@
 		this.score -= 1;
 		$("#points").text(this.score);
 	},
+
+    /**
+    REMOVE POINTS 
+    */
+	Tracking : function (param) {
+	    console.log(param);
+	},
+
 	
 	/**
 	GET LEADERBOARD DATA
