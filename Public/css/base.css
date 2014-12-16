@@ -25,7 +25,7 @@ body{margin-top: 0px; background-color:lightgray; }
 #spot-the-difference .quit span { text-transform: uppercase; margin-right: 5px; font-size: 1.1em; font-weight: 500; }
 #spot-the-difference .quit a img { height: 30px; width: 30px; }
 
-#spot-the-difference .btn { position: relative; font-size: 19px; padding: 11px; height: 52px; text-shadow: 1px 1px 2px #000000;}
+#spot-the-difference .btn { position: relative; font-size: 19px; padding: 11px; height: 52px; text-shadow: 1px 1px 2px #000000; z-index: 1000;}
 		#spot-the-difference .btn img.btn-arrow { margin-right: 10px; }
 		#spot-the-difference .btn.gradient-blue { background: url("../img/blue-bg.jpg") repeat-x; border: 1px solid #3b5b84; }
 		#spot-the-difference .btn.gradient-grey { background: url("../img/grey-bg.jpg") repeat-x; }
@@ -40,8 +40,8 @@ body{margin-top: 0px; background-color:lightgray; }
 				#spot-the-difference .page-bottom .right .player-info { width: 43%; float: right; }
 						#spot-the-difference .page-bottom .right .player-info .level, #spot-the-difference .page-bottom .right .player-info .score { width: 100%; text-transform: uppercase; font-size:25px; }
 						#spot-the-difference .page-bottom .right .player-info .level { margin-top: 6px; margin-bottom: 12px; }
-								#spot-the-difference .page-bottom .right .player-info .level:before { content: "level:"; margin-right: 5px; }
-						#spot-the-difference .page-bottom .right .player-info .score:before { content: "score:"; margin-right: 5px; }
+								#spot-the-difference .page-bottom .right .player-info .level:before { margin-right: 5px; }
+						#spot-the-difference .page-bottom .right .player-info .score:before { margin-right: 5px; }
 				#spot-the-difference .page-bottom .right .timer { width: 50%; float: right; height: 88px; }
 						#spot-the-difference .page-bottom .right .timer .clock { margin-right: 5px; }
 				#spot-the-difference .page-bottom .right.last { display: none; }
@@ -92,7 +92,7 @@ body{margin-top: 0px; background-color:lightgray; }
 
 #spot-the-difference .modal { border: 3px solid white; overflow: none; overflow-y: hidden; display: none; border-radius: 10px; padding-right: 5%; padding-left: 5%; position: absolute; top: 20%; left: 15%; right: 15%; bottom: 55%; }
 		#spot-the-difference .modal.howtoplay { top: 12%; left: 7%; right: 7%; bottom: 18%; padding-right: 12%;}
-				#spot-the-difference .modal.howtoplay p { margin-left: 30px; font-size:24px; margin-top: 30px; }
+				#spot-the-difference .modal.howtoplay p { margin-left: 30px; font-size:22px; margin-top: 30px; }
 				#spot-the-difference .modal.howtoplay h2, #spot-the-difference .modal.howtoplay .btn { margin-left: 30px; margin-top: 50px; }
 				#spot-the-difference .modal.howtoplay .close-button { position: absolute; right: 10px; top: 15px; width: 48px; cursor: pointer; }
 		#spot-the-difference .modal.modal-corner { top: 32px; right: -1%; bottom: 73%; left: 40%; border-right: none;}
@@ -173,8 +173,8 @@ body{margin-top: 0px; background-color:lightgray; }
 						#spot-the-difference .page-bottom .right .player-info { width: 43%; float: right; }
 								#spot-the-difference .page-bottom .right .player-info .level, #spot-the-difference .page-bottom .right .player-info .score { font-size:18px; }
 								#spot-the-difference .page-bottom .right .player-info .level { margin-top: 6px; margin-bottom: 8px; }
-										#spot-the-difference .page-bottom .right .player-info .level:before { content: "level:"; margin-right: 5px; }
-								#spot-the-difference .page-bottom .right .player-info .score:before { content: "score:"; margin-right: 5px; }
+										#spot-the-difference .page-bottom .right .player-info .level:before { margin-right: 5px; }
+								#spot-the-difference .page-bottom .right .player-info .score:before { margin-right: 5px; }
 						#spot-the-difference .page-bottom .right .timer { height: 66px; }
 								#spot-the-difference .page-bottom .right .timer .clock { height: 100%; }
 								#spot-the-difference .page-bottom .right .timer .clock-colon { height: 60%; }
@@ -459,8 +459,8 @@ body{margin-top: 0px; background-color:lightgray; }
 						#spot-the-difference .page-bottom .right .player-info { width: 68%; float: right; }
 								#spot-the-difference .page-bottom .right .player-info .level, #spot-the-difference .page-bottom .right .player-info .score { font-size:12px; }
 								#spot-the-difference .page-bottom .right .player-info .level { margin-top: 8px; margin-bottom: 4px; }
-										#spot-the-difference .page-bottom .right .player-info .level:before { content: "level:"; margin-right: 5px; }
-								#spot-the-difference .page-bottom .right .player-info .score:before { content: "score:"; margin-right: 5px; }
+										#spot-the-difference .page-bottom .right .player-info .level:before { margin-right: 5px; }
+								#spot-the-difference .page-bottom .right .player-info .score:before { margin-right: 5px; }
 						#spot-the-difference .page-bottom .right .timer { height: 45px; float: left; width: 30%; }
 
 						
@@ -468,7 +468,7 @@ body{margin-top: 0px; background-color:lightgray; }
 				#spot-the-difference .trophy-page h2 { font-size: 17px; margin-top: 5px; margin-bottom: 4px; }
 				#spot-the-difference .trophy-page .trophy-area { width: 100%; margin: 0 auto; }
 						#spot-the-difference .trophy-page .trophy-area img { width: 100%; height: 100%; border: 0; }
-				#spot-the-difference .trophy-page .user-score { width: 80px; left: 170px; bottom: 123px;}
+				#spot-the-difference .trophy-page .user-score { width: 80px; left: 170px; bottom: 110px;}
 				#spot-the-difference .trophy-page .userscored-div { font-size: 14px; height: 25px; }
 				#spot-the-difference .trophy-page #SubmitToLeaderboard { margin-top: 15px;}
 				#spot-the-difference .trophy-page #SkipAhead { margin-top: -20px;}

@@ -14,6 +14,8 @@
     this.toBeFound = 10;
     this.startTime = Date.now();
     this.time = this.startTime;
+    this.translations = [];
+    this.language = 'fr';
     this.finishFunction = function () { };
     this.incorrectFunction = function () { };
     // INIT 
@@ -31,6 +33,15 @@
 		// declare scope obj
 		var that = this;
 		
+
+		this.translations = [{ 'en': 'QUIZ', 'fr': 'TEST' }, { 'en': 'FINAL QUIZ', 'fr': 'EXAMEN FINAL' }];
+
+	    // QUIZ       = this.translations[0][this.language];
+	    // FINAL QUIZ = this.translations[1][this.language];
+
+		console.log(this.translations[0][this.language]);
+		console.log(this.translations[1][this.language]);
+
 		var levelIntroTime = 2000;
 		var isPaused = true;
 		var timerInterval = setInterval(function () {
@@ -56,14 +67,14 @@
 		var gameCarousel = $("#carousel-spot-the-difference");
 		$("#carousel-spot-the-difference").carousel('pause');
 		
-		//$("body").keydown(function (e) {
-		//    if (e.keyCode == 37) { // left
-		//        $(gameCarousel).carousel('prev');
-		//    }
-		//    else if (e.keyCode == 39) { // right
-		//        $(gameCarousel).carousel('next');
-		//    }
-		//});
+		$("body").keydown(function (e) {
+		    if (e.keyCode == 37) { // left
+		        $(gameCarousel).carousel('prev');
+		    }
+		    else if (e.keyCode == 39) { // right
+		        $(gameCarousel).carousel('next');
+		    }
+		});
 
 		$(".spot").click(function () {
 		    var id = $(this).attr("data-id");
@@ -112,7 +123,7 @@
 		        $("#usernameLabel").text(that.username);
 		        $(gameCarousel).carousel('next');
 		        that.level = "Level 1, spot";
-		        $(".level").text("1");
+		        $("#levelDisplay").text("1");
 		        setTimeout(function () {
 		            $(gameCarousel).carousel('next');
 		            $("#Modal-StartSpotLevel1").modal("show");
@@ -144,7 +155,7 @@
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartQuizLevel1").modal("show");
 		    that.level = "Level 1, quiz";
-		    $(".level").text("QUIZ");
+		    $("#levelDisplay").text("QUIZ");
 		});
 
 	    // Level 1 Quiz
@@ -162,7 +173,7 @@
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartBonusLevel1").modal("show");
 		    that.level = "Level 1, bonus";
-		    $(".level").text("BONUS");
+		    $("#levelDisplay").text("BONUS");
 		});
 
 	    // Level 1 Bonus
@@ -180,7 +191,7 @@
 		    $("#Modal-EndBonusLevel1").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    that.level = "Level 2, spot";
-		    $(".level").text("2");
+		    $("#levelDisplay").text("2");
 		    setTimeout(function () {
 		        $(gameCarousel).carousel('next');
 		        $("#Modal-StartSpotLevel2").modal("show");
@@ -207,7 +218,7 @@
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartBonusLevel2").modal("show");
 		    that.level = "Level 2, bonus";
-		    $(".level").text("BONUS");
+		    $("#levelDisplay").text("BONUS");
 		});
 	    // Level 2 Bonus
 		$("#Start-BonusLevel2").click(function () {
@@ -225,7 +236,7 @@
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartQuizLevel2").modal("show");
 		    that.level = "Level 2, quiz";
-		    $(".level").text("QUIZ");
+		    $("#levelDisplay").text("QUIZ");
 		});
 	    // Level 2 Quiz
 		$("#Start-QuizLevel2").click(function () {
@@ -241,7 +252,7 @@
 		    $("#Modal-EndQuizLevel2").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    that.level = "Level 3, spot";
-		    $(".level").text("3");
+		    $("#levelDisplay").text("3");
 		    setTimeout(function () {
 		        $(gameCarousel).carousel('next');
 		        $("#Modal-StartSpotLevel3").modal("show");
@@ -268,7 +279,7 @@
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartBonus1Level3").modal("show");
 		    that.level = "Level 3, bonus 1";
-		    $(".level").text("BONUS");
+		    $("#levelDisplay").text("BONUS");
 		});
 	    // Level 3 Bonus 1
 		$("#Start-Bonus1Level3").click(function () {
@@ -303,7 +314,7 @@
 		    $(gameCarousel).carousel('next');
 		    $("#Modal-StartQuizLevel3").modal("show");
 		    that.level = "Level 3, quiz";
-		    $(".level").text("FINAL QUIZ");
+		    $("#levelDisplay").text("FINAL QUIZ");
 		});
 	    // Level 3 Quiz
 		$("#Start-QuizLevel3").click(function () {
