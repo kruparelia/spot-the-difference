@@ -1,39 +1,93 @@
-﻿/* ADD ALL FRENCH OVERRIDES HERER */
+﻿/*#spot-the-difference h2 { font-size: 30px; }*/
+#spot-the-difference .page-bottom .left .mini-text p { font-size: 24px; margin-top: 15px; }
+#spot-the-difference .page-bottom .right .player-info .level { margin-top: 18px; }
+#spot-the-difference .page-bottom .right .player-info .level, #spot-the-difference .page-bottom .right .player-info .score { font-size: 21px; }
 
+#spot-the-difference .modal { bottom: 50%; }
+#spot-the-difference .modal.modal-corner { bottom: 70%;  }
+		#spot-the-difference .modal.modal-corner h3 { font-size: 26px; margin-bottom: 28px; margin-top: 34px; }
+		#spot-the-difference .modal.modal-corner p { font-size: 22px; line-height: 22px; }
 
-#home-page-container h1 {
-	font-size : 25px;
+#spot-the-difference .modal.modal-center p { min-height: 90px; font-size: 22px; line-height: 22px; }
+#spot-the-difference .modal.modal-center h3 { margin-bottom: 28px; margin-top: 34px; }
+#spot-the-difference .modal.modal-center h2 { margin-bottom: 20px; }
+
+#spot-the-difference .quiz-area ul li { margin: 20px 0; }
+#spot-the-difference #quiz1.quiz-area h2 { margin-top: 260px; margin-bottom: 40px; font-size: 48px; }
+
+#spot-the-difference .end-page .actions li a { font-size: 20px; padding-top: 13px; }
+
+@media (max-width: 1150px),(max-height: 1150px) {
+		#spot-the-difference .modal.modal-center p { min-height: 70px; font-size: 16px; line-height: 16px; }
+		#spot-the-difference .modal.howtoplay p { font-size: 15px; }
+
+		#spot-the-difference .page-bottom .left .mini-text p { font-size: 16px; margin-top: 15px; }
+		#spot-the-difference .page-bottom .right .player-info .level, #spot-the-difference .page-bottom .right .player-info .score { font-size: 16px; }
+
+		#spot-the-difference .modal.modal-corner h3 { font-size: 19px; margin-bottom: 24px; margin-top: 24px; }
+
+		#spot-the-difference .modal.modal-corner p { min-height: 53px; font-size: 16px; line-height: 18px; }
+		#spot-the-difference .modal.modal-center h3 { margin-bottom: 20px; margin-top: 28px; }
+
+		#spot-the-difference #quiz1.quiz-area h2 { margin-top: 140px; margin-bottom: 40px; font-size: 34px; }
+		#spot-the-difference .quiz-area ul li { margin: 14px 0; font-size: 24px; }
+
+		#spot-the-difference .end-page .actions li a img { margin-top: -4px; }
+		#spot-the-difference .end-page .actions li a { font-size: 15px; padding-top: 10px; }
 }
+@media (max-width: 950px),(max-height: 950px) {
+		#spot-the-difference .input-name { width: 360px; }
+		#spot-the-difference .modal.howtoplay p { font-size: 12px; }
+		#spot-the-difference .modal.modal-center p { min-height: 40px; font-size: 12px; line-height: 12px; }
+		#spot-the-difference .page-bottom .left .mini-text p { font-size: 13px; margin-top: 8px; }
+		#spot-the-difference .page-bottom .right .player-info .level, #spot-the-difference .page-bottom .right .player-info .score { font-size: 12px; }
+		#spot-the-difference .page-bottom .right .player-info .level { margin-top: 11px; }
+		#spot-the-difference .modal.modal-corner h3 { font-size: 15px; margin-bottom: 18px; margin-top: 16px; }
+		#spot-the-difference .modal.modal-corner p { min-height: 40px; font-size: 12px; line-height: 12px; }
+		#spot-the-difference .modal.modal-center h3 { margin-bottom: 20px; margin-top: 18px; }
 
-#home-page-container #dag-right-column button {
-    height: auto;
+		#spot-the-difference #quiz1.quiz-area h2 { margin-top: 130px; margin-bottom: 40px; font-size: 28px; }
+		#spot-the-difference .quiz-area ul li label { padding-left: 45px; }
+		#spot-the-difference .quiz-area ul li { margin: 8px 0; font-size: 20px; }
+
+		#spot-the-difference .end-page .actions li a { font-size: 11px; padding-top: 8px; }
+						#spot-the-difference .end-page .actions li a img { margin-top: -3px; }
 }
+@media (max-width: 750px){
+		#spot-the-difference .input-name { width: 300px; }
+		#spot-the-difference .modal.howtoplay { padding-right: 6%; }
+						#spot-the-difference .modal.howtoplay p { font-size: 7px; }
 
-#home-page-container #stay-in-loop {
-    margin-bottom: 50px;
-}
+		#spot-the-difference .btn img.btn-arrow { top: -1px; }
 
-#home-page-container #build-your-mini {
-    margin-bottom: 20px;
-}
+		#spot-the-difference .page-bottom .left .mini-text p { font-size: 12px; }
 
-#home-page-container #french-button {
-    width: 100%;
-}
+		#spot-the-difference .modal.modal-corner { bottom: 39%; }
 
-#home-page-container .french-button img {
-    float: left;
-    width: 15%;
-    display: inline-block;
-}
+		#spot-the-difference #quiz1.quiz-area h2 { margin-top: 0px; margin-bottom: 15px; font-size: 21px; }
 
-#home-page-container .french-text {
-    float: left;
-    width: 85%;
-    display: inline-block;
-}
+		#spot-the-difference .quiz-area ul li label { padding-left: 30px; }
+		#spot-the-difference .quiz-area ul li { margin: 2px 0; font-size: 12px; }
+		#spot-the-difference .levelintro-image { height: 85%; }
 
-#home-page-container .btn {
-    white-space: normal !important;
-    height: auto !important;
+		#spot-the-difference .quiz-area h2 { font-size: 16px; }
+
+		#spot-the-difference .modal.modal-center { bottom: 45%; }
+		#spot-the-difference .modal.modal-center h2 { margin-top: 15px; margin-bottom: 10px; }
+		#spot-the-difference .modal.modal-center p { font-size: 9px; line-height: 11px; }
+		#spot-the-difference .modal.modal-corner { bottom: 45%; }
+		#spot-the-difference .modal.modal-corner h2 { margin-top: 15px; margin-bottom: 10px; }
+		#spot-the-difference .modal.modal-corner p { font-size: 9px; line-height: 11px; }
+
+		#spot-the-difference #Modal-EndSpotLevel1 h2 { margin-top: 11px; margin-bottom: 5px; }
+		#spot-the-difference #Modal-EndBonusLevel1 h2 { margin-top: 11px; margin-bottom: 5px; }
+		#spot-the-difference #Modal-EndSpotLevel2 h2 { margin-top: 11px; margin-bottom: 5px; }
+		#spot-the-difference #Modal-EndBonusLevel2 h2 { margin-top: 11px; margin-bottom: 5px; }
+		#spot-the-difference #Modal-IncorrectQuizLevel3 h3 { margin-bottom: 0px; margin-top: 9px; }
+		#spot-the-difference #Modal-IncorrectQuizLevel3 { margin-bottom: 8px;}
+
+		#spot-the-difference .end-page .user-score { position: absolute; top: 35px; left: 180px; }
+		#spot-the-difference .end-page .actions li.long { width: 145px; }
+		#spot-the-difference .end-page .actions li a img { margin-top: 0px; }
+		#spot-the-difference .end-page .actions li a { font-size: 6px; padding-top: 7px; }
 }

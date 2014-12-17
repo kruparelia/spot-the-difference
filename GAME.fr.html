@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>MINI Canada</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="en" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    
+    <!-- MAIN STYLES -->
+    <link rel="stylesheet" href="Public/css/mini.ca.css" type="text/css" media="screen" />
+
+    <!-- PAGE STYLE SHEET HERE -->
+    <link rel="stylesheet" href="Public/css/mini.drive-john.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Public/css/base.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Public/css/french.css" type="text/css" media="screen" />
+
+</head>
+<body>
+    <div id="spot-the-difference">
+        <div class="clearfix">
+
+            <div>
+                <!-- MAIN PAGE NAMESPACE -->
+                <!-- MAIN CAROUSEL OPEN TAG -->
+                <div id="carousel-spot-the-difference" class="carousel slide">
+                    <div class="carousel-inner">
+                        <!--Intro-->
+                        <div class="intro-page item active" >
+                            <h1>TROUVEZ LA DIFFÉRENCE.</h1>
+                            <h2 class="blue">AVEC LA NOUVELLE MINI 5 PORTES.</h2>
+                            <p>Testez votre capacité à trouver la différence dans ce jeu<br/>mettant en vedette la nouvelle MINI 5 portes.</p>
+                            <img class="car-image" src="/Public/img/introscreen-mobile.jpg" />
+                            <div class="p1-footer">
+                                <h4>ENTREZ VOTRE NOM DE JOUEUR</h4>
+                                <input class="input-name" id="username" type="text">
+                                <button id="GoButton" class="start-button btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">COMMENCER</button>
+                                <div class="mobile-only btn-space"></div>
+                                <button id="HowToPlayButton" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">COMMENT JOUER</button>
+                            </div>
+                            <!--How to Play Modal-->
+                            <div class="howtoplay modal fade" id="Modal-HowToPlay" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <img src="Public/img/close.png" data-dismiss="modal" class="close-button" />
+                                <div class="how">
+                                    <h2 class="blue">COMMENT JOUER.</h2>
+                                    <p>Dans ce jeu de « correspondance de photos », utilisez votre souris pour indiquer les différences entre deux photos côte à côte mettant en vedette la nouvelle MINI 5 portes.</p>
+                                </div>
+                                <div class="scoring">
+                                    <h2 class="blue">OBTENIR DES POINTS.</h2>
+                                    <p>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Vous obtenez des points en cliquant sur toutes les différences pour chaque niveau.<br/>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Vous obtenez 10 points pour chaque bonne réponse entre 0 et 10 secondes.<br/>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Vous obtenez 5 points pour chaque bonne réponse entre 11 et 20 secondes.<br/>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Vous obtenez 3 points pour chaque bonne réponse entre 21 et 30 secondes.<br/>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Vous obtenez 1 point pour chaque bonne réponse après 31 secondes.
+                                    </p>
+                                </div>
+                                <div class="losing">
+                                    <h2 class="blue">PERDRE DES POINTS.</h2>
+                                    <p>
+                                        <img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">&nbsp;Vous perdez 1 point pour chaque mauvaise réponse.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--LEVEL 1 Intro-->
+                        <div class="item">
+                            <img id="Level1IntroScreen" src="Public/img/level1screen-fr.jpg" class="levelintro-image" />
+                        </div>
+
+                        <!--LEVEL 1 SPOT-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal modal-center fade" id="Modal-StartSpotLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>NIVEAU 1.</h2>                                <p>Trouvez les différences (Indice : Il y en a 3).</p>
+                                <button id="Start-SpotLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">JOUER</button>
+                            </div>
+                            <!--Completion Modal-->
+                            <div class="modal-corner modal fade" id="Modal-EndSpotLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>nice BONNE UTILISATION DE VOS DEUX YEUX!</h2>
+                                <p>Prenez le volant une fois, et vous réaliserez que le monde a l’air différent avec la nouvelle MINI 5 portes.</p>
+                                <button id="End-SpotLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">PROCHAIN NIVEAU</button>
+                            </div>
+
+                            <img id="spot-level1" class="spot-level" src="/Public/img/level1spot.jpg" />
+                            <img id="spot-level1-mobile" class="spot-level mobile-only" src="/Public/img/level1spot-mobile.jpg" />
+                            <div class="spot spot-11a" data-id="11"></div>
+                            <div class="spot spot-11b" data-id="11"></div>
+                            <div class="spot spot-12a" data-id="12"></div>
+                            <div class="spot spot-12b" data-id="12"></div>
+                            <div class="spot spot-13a" data-id="13"></div>
+                            <div class="spot spot-13b" data-id="13"></div>
+                        </div>
+                        <!--LEVEL 1 QUIZ-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal-center modal fade" id="Modal-StartQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>PETIT TEST, POUR GRAND GÉNIE!</h2>
+                                <p>
+                                   Vous vous souvenez des examens à choix multiples? Eh bien, ils sont de retour! Préparez-vous à cliquer sur la bonne réponse.
+                                </p>
+                                <button id="Start-QuizLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">JOUER</button>
+                            </div>
+                            <!--Incorrect Modal-->
+                            <div class="modal-center modal fade" id="Modal-IncorrectQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>MAUVAISE RÉPONSE.</h2>
+                                <p>Pensez-y comme il faut.</p>
+                                <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">ESSAYER ENCORE</button>
+                            </div>
+                            <!--Correct Modal-->
+                            <div class="modal-center modal fade" id="Modal-EndQuizLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>BONNE RÉPONSE!</h2>
+                                <p>La nouvelle MINI 5 portes a – vous l’avez deviné – 5 portes!</p>
+                                <button id="End-QuizLevel1" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">PROCHAIN NIVEAU</button>
+                            </div>
+                        
+							<div id="quiz1" class="quiz-area">
+								<h2>COMBIEN DE PORTES<br /><span class="blue">LA NOUVELLE MINI 5 PORTES</span> A-T-ELLE?</h2>
+								<ul>
+									<li><input type="radio" id ='qc1' name='popquizchoice' ><label for="qc1">3 portes</label></li>
+									<li><input type="radio" id ='qc2' name='popquizchoice' ><label for="qc2">4 portes</label></li>
+									<li><input type="radio" id ='qc3' name='popquizchoice' data-correct="true"><label for="qc3">5 portes</label></li>
+									<li><input type="radio" id ='qc4' name='popquizchoice' ><label for="qc4">Des portes? Comme, pour la maison?</label></li>
+								</ul>				  		
+							</div>
+                        </div>	<!-- END TILE 3  -->
+                        <!--LEVEL 1 BONUS-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal-center modal fade" id="Modal-StartBonusLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>PARTIE BONUS!</h2>                                <p>Pouvez-vous trouver la différence?</p>
+                                <button id="Start-BonusLevel1" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">JOUER</button>
+                            </div>
+                            <!--Completion Modal-->
+                            <div class="modal-corner modal fade" id="Modal-EndBonusLevel1" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>PRÉCIS… COMME LA MANIABILITÉ!</h2>
+                                <p>La nouvelle MINI 5 portes a 2 portes supplémentaires qui donnent accès à une banquette arrière spacieuse.</p>
+                                <button id="End-BonusLevel1" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">PROCHAIN NIVEAU</button>
+                            </div>
+
+                            <img id="bonus-level1" class="spot-level" src="Public/img/level1bonus.jpg" />
+                            <img id="bonus-level1-mobile" class="spot-level mobile-only" src="Public/img/level1bonus-mobile.jpg" />
+                            <div class="spot spot-14a" data-id="14"></div>
+                            <div class="spot spot-14b" data-id="14"></div>
+
+                        </div>
+                        <!--LEVEL 2 Intro-->
+                        <div class="item">
+                            <img id="Level2IntroScreen" src="Public/img/level2screen-fr.jpg" class="levelintro-image" />
+                        </div>
+
+                        <!--LEVEL 2 SPOT-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal-center modal fade" id="Modal-StartSpotLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>NIVEAU 2.</h2>                                <p>Trouvez les différences (Indice : Il y en a 5).</p>
+                                <button id="Start-SpotLevel2" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">JOUER</button>
+                            </div>
+                            <!--Completion Modal-->
+                            <div class="modal-corner modal fade" id="Modal-EndSpotLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>EXCELLENTES CONNAISSANCES AUTOMOBILES!</h2>
+                                <p>Vous en aurez sûrement besoin lorsque vous découvrirez la maniabilité super précise de la nouvelle MINI 5 portes. </p>
+                                <button id="End-SpotLevel2" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">PROCHAIN NIVEAU</button>
+                            </div>
+
+                            <img id="spot-level2" class="spot-level" src="Public/img/level2spot.jpg" style="width:100%;" />
+                            <img id="spot-level2-mobile" class="spot-level mobile-only" src="/Public/img/level2spot-mobile.jpg" />
+                            <div class="spot spot-21a" data-id="21" ></div>
+                            <div class="spot spot-21b" data-id="21" ></div>
+                            <div class="spot spot-22a" data-id="22" ></div>
+                            <div class="spot spot-22b" data-id="22" ></div>
+                            <div class="spot spot-23a" data-id="23" ></div>
+                            <div class="spot spot-23b" data-id="23" ></div>
+                            <div class="spot spot-24a" data-id="24" ></div>
+                            <div class="spot spot-24b" data-id="24" ></div>
+                            <div class="spot spot-25a" data-id="25" ></div>
+                            <div class="spot spot-25b" data-id="25" ></div>
+                        </div>	<!-- END TILE 2  -->
+                        <!--LEVEL 2 BONUS-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal-center modal fade" id="Modal-StartBonusLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+								<h2>PARTIE BONUS!</h2>								<p>Une nouvelle MINI 5 portes est cachée. Pouvez-vous la trouver?</p>
+                                <button id="Start-BonusLevel2" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">JOUER</button>
+                            </div>
+                            <!--Completion Modal-->
+                            <div class="modal-corner modal fade" id="Modal-EndBonusLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+								<h2>VOUS SAVEZ COMMENT LES CHOISIR!</h2>
+								<p>Avec les très nombreuses couleurs extérieures et options de personnalisation, se démarquer est vraiment facile avec la nouvelle MINI 5 portes.</p>
+                                <button id="End-BonusLevel2" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">PROCHAIN NIVEAU</button>
+                            </div>
+
+                            <img class="spot-level" src="Public/img/level2bonus.jpg" />
+                            <div class="spot spot-26" data-id="26"></div>
+                        </div>
+                        <!--LEVEL 2 QUIZ-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal-center modal fade" id="Modal-StartQuizLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>PETIT TEST, POUR GRAND GÉNIE!</h2>
+								<p>Préparez-vous à cliquer sur la bonne réponse.</p>
+                                <button id="Start-QuizLevel2" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">JOUER</button>
+                            </div>
+                            <!--Incorrect Modal-->
+                            <div class="modal-center modal fade" id="Modal-IncorrectQuizLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>MAUVAISE RÉPONSE.</h2>
+								<p>Vous devrez faire beaucoup mieux que ça.</p>
+                                <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">ESSAYER ENCORE</button>
+                            </div>
+                            <!--Correct Modal-->
+                            <div class="modal-center modal fade" id="Modal-EndQuizLevel2" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>BONNE RÉPONSE! </h2>
+								<p>La nouvelle MINI 5 portes offre 67 litres d’espace de chargement de plus que la MINI 3 portes. Vous pouvez maintenant accueillir 4 amis, et tout leur équipement.</p>
+                                <button id="End-QuizLevel2" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">PROCHAIN NIVEAU</button>
+                            </div>
+
+							<div class="quiz-area">
+                                <h2>COMPARATIVEMENT À LA MINI 3 PORTES, COMBIEN DE LITRES D’ESPACE DE CHARGEMENT DE PLUS <span class="blue">LA NOUVELLE MINI 5 PORTES</span> A-T-ELLE?</h2>
+								<ul>
+									<li><input type="radio" id ='qc5' name='popquizchoice' ><label for="qc5">27 litres d’espace de chargement de plus</label></li>
+									<li><input type="radio" id ='qc6' name='popquizchoice' ><label for="qc6">37 litres d’espace de chargement de plus</label></li>
+									<li><input type="radio" id ='qc7' name='popquizchoice' ><label for="qc7">57 litres d’espace de chargement de plus</label></li>
+									<li><input type="radio" id ='qc8' name='popquizchoice' data-correct="true"><label for="qc8">67 litres d’espace de chargement de plus</label></li>
+								</ul>				  		
+							</div>
+                        </div>
+                    
+
+                        <!--LEVEL 3 Intro-->
+                        <div class="item">
+                            <img id="Level3IntroScreen" src="Public/img/level3screen-fr.jpg" class="levelintro-image" />
+                        </div>
+                        <!--LEVEL 3 SPOT-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal-center modal fade" id="Modal-StartSpotLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>NIVEAU 3.</h2>                                <p>Trouvez les différences (Indice : Il y en a 5).</p>
+                                <button id="Start-SpotLevel3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">JOUER</button>
+                            </div>
+                            <!--Completion Modal-->
+                            <div class="modal-corner modal fade" id="Modal-EndSpotLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+								<h2>VOUS ÊTES PLUTÔT VITE.</h2>
+								<p>Votre besoin de vitesse sera comblé par le moteur Twin Power Turbo de la nouvelle MINI 5 portes, qui vous propulse de 0 à 100 km/h en seulement 6,8 secondes.</p>
+                                <button id="End-SpotLevel3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">PROCHAIN NIVEAU</button>
+                            </div>
+
+                            <img id="spot-level3" class="spot-level" src="Public/img/level3spot.jpg" />
+                            <img id="spot-level3-mobile" class="spot-level mobile-only" src="/Public/img/level3spot-mobile.jpg" />
+                            <div class="spot spot-31a" data-id="31" ></div>
+                            <div class="spot spot-31b" data-id="31" ></div>
+                            <div class="spot spot-32a" data-id="32" ></div>
+                            <div class="spot spot-32b" data-id="32" ></div>
+                            <div class="spot spot-33a" data-id="33" ></div>
+                            <div class="spot spot-33b" data-id="33" ></div>
+                            <div class="spot spot-34a" data-id="34" ></div>
+                            <div class="spot spot-34b" data-id="34" ></div>
+                            <div class="spot spot-35a" data-id="35" ></div>
+                            <div class="spot spot-35b" data-id="35" ></div>
+                        </div>
+                        
+                        <!--LEVEL 3 BONUS 1-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal-center modal fade" id="Modal-StartBonus1Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>PARTIE BONUS!</h2>                                <p>Trouvez la nouvelle MINI 5 portes.</p>
+                                <button id="Start-Bonus1Level3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">JOUER</button>
+                            </div>
+                            <!--Completion Modal-->
+                            <div class="modal-corner modal fade" id="Modal-EndBonus1Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>VOUS EN AVEZ DEDANS!</h2>
+                                <p>Grâce à son charme légendaire, la nouvelle MINI 5 portes est toujours à l’avant-plan.</p>
+                                <button id="End-Bonus1Level3" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">PROCHAIN NIVEAU</button>
+                            </div>
+
+                            <img class="spot-level" src="Public/img/level3bonus1.jpg" style="width:100%;" />
+                            <div class="spot spot-36" data-id="36" ></div>
+                        </div>
+                        <!--LEVEL 3 BONUS 2-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal-center modal fade" id="Modal-StartBonus2Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>DOUBLE PARTIE BONUS!</h2>                                <p>Pouvez-vous trouver la différence intérieure?</p>
+                                <button id="Start-Bonus2Level3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">Play</button>
+                            </div>
+                            <!--Completion Modal-->
+                            <div class="modal-corner modal fade" id="Modal-EndBonus2Level3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>VOUS AVEZ VU LA LUMIÈRE!</h2>
+                                <p>La nouvelle MINI 5 portes offre un éclairage d’ambiance haut de gamme qui plaira aussi à vos passagers arrière.</p>
+                                <button id="End-Bonus2Level3" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">PROCHAIN NIVEAU</button>
+                            </div>
+
+                            <img id="bonus2-level3" class="spot-level" src="Public/img/level3bonus2.jpg"/>
+                            <img id="bonus2-level3-mobile" class="spot-level mobile-only" src="/Public/img/level3bonus2-mobile.jpg" />
+                            <div class="spot spot-37a" data-id="37"></div>
+                            <div class="spot spot-37b" data-id="37"></div>
+                        </div>
+                        <!--LEVEL 3 QUIZ-->
+                        <div class="item">
+                            <!--Intro Modal-->
+                            <div class="modal-center modal fade" id="Modal-StartQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+                                <h2>L’EXAMEN FINAL.</h2>
+								<p>Préparez-vous à cliquer sur la bonne réponse.</p>
+                                <button id="Start-QuizLevel3" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">JOUER</button>
+                            </div>
+                            <!--Incorrect Modal-->
+                            <div class="modal-center modal fade" id="Modal-IncorrectQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+								<h3>OUI… MAIS ELLE OFFRE BIEN<br/>PLUS ENCORE.</h3>
+                                <p></p>
+                                <button type="button" class="btn btn-md  btn-primary gradient-blue shadow" data-dismiss="modal"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">ESSAYER ENCORE</button>
+                            </div>
+                            <!--Correct Modal-->
+                            <div class="modal-center modal fade" id="Modal-EndQuizLevel3" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+								<h2>EXACTEMENT!</h2>
+								<p>La nouvelle MINI 5 portes représente le meilleur des deux mondes. Le mélange parfait du style emblématique et de la maniabilité précise MINI… mais dans une voiture 5 portes fougueuse et polyvalente.</p>
+                                <button id="End-QuizLevel3" class="btn btn btn-md btn-primary gradient-blue shadow clickable"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">VOIR VOTRE SCORE FINAL</button>
+                            </div>
+                            
+
+							<div class="quiz-area">	
+                                <h2>QU’EST-CE QUI REND <br /><span class="blue">LA NOUVELLE MINI 5 PORTES</span> SI EXCEPTIONNELLE?</h2>
+								<ul>
+									<li><input type="radio" id ='qc9' name='popquizchoice' ><label for="qc9">Style emblématique</label></li>
+									<li><input type="radio" id ='qc10' name='popquizchoice' ><label for="qc10">Maniabilité précise et légendaire</label></li>
+									<li><input type="radio" id ='qc11' name='popquizchoice' ><label for="qc11">Deux portes supplémentaires</label></li>
+									<li><input type="radio" id ='qc12' name='popquizchoice' ><label for="qc12">Plus d’espace pour les jambes à l’arrière</label></li>
+									<li><input type="radio" id ='qc13' name='popquizchoice' ><label for="qc13">Plus d’espace de chargement</label></li>
+									<li><input type="radio" id ='qc14' name='popquizchoice' data-correct="true" ><label for="qc14">La meilleure réponse est sans doute… toutes ces réponses</label></li>
+								</ul>				  		
+							</div>
+                        </div>
+                        <!--Final Results-->
+						<div class="item trophy-page">
+							<h2>VOICI CE QUE VOUS AVEZ TOUJOURS MÉRITÉ.</h2>
+							<div class="trophy-area"><img src="Public/img/trophy.jpg" alt="" style="width:100%;"></div>
+                            <div class="userscored-div">
+                                SCORE DE: <span class="username">USERNAME</span>
+                            </div>
+                            <button id="SubmitToLeaderboard" class="btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">AFFICHER SUR LE TABLEAU</button>
+							<div class="user-score">0</div>
+                            <br />
+                            <br />
+                            <button id="SkipAhead" class="btn btn-md btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">AVANCER</button>
+						</div>
+
+                        <!--Leaderboards-->
+                        <div class="item leader-page">
+							<h1>TABLEAU.<img class="mini-logo" src="Public/img/minilogo.jpg" alt=""></h1>
+							<div class="mini-logo"><img src="" alt=""></div>
+							<div class="board-area">
+								<table id="lbTable" class="leaderboard">
+									<tr id="lbHeaderRow">
+										<th class="rank-head">RANG</th>
+                                        <th class="user-head">UTILISATEUR</th>
+                                        <th class="pts-head">Points</th>
+									</tr>
+
+								</table>
+							</div>
+
+							<button id="LB-Next" class="btn btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">SUIVANT</button>
+						</div>
+                    
+                        <!--End Page-->
+						<div class="item end-page">
+							<h1>MERCI D’AVOIR JOUÉ!</h1>
+							<div class="final-score">
+                                <p class="userscored-div">
+                                    SCORE DE: <span class="username">Username</span><br class="mobile-only" />
+                                </p>
+								<div class="user-score">0</div>
+							</div>
+							<div class="mini-img">
+								<img src="Public/img/endscreen.jpg" alt="">
+							</div>
+							<ul class="actions">
+								<li class="long"><a href="#" class="btn btn-md  btn-primary gradient-blue shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">DÉCOUVRIR LA NOUVELLE MINI 5 PORTES</a></li>
+								<li class="short"><a href="#" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">ESSAI ROUTIER</a></li>
+								<li class="long"><a href="#" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">CONFIGURATION et PRIX</a></li>
+								<li class="short"><a href="#" class="btn btn-md  btn-primary gradient-grey shadow"><img src="Public/img/btn-arrow.png" class="btn-arrow" alt="">SUIVRE L’ACTION</a></li>
+							</ul>
+					    </div>
+                    </div><!-- CLOSE INNER CAROUSEL -->
+                    <!-- FOOTER AREA  -->
+                    <div id="ui-info" class="page-bottom" hidden>
+                        <div class="left">
+                            <div class="mini-logo"><img src="Public/img/minilogo.jpg" alt="MINI Logo"></div>
+                            <div class="mini-text">
+                                <p class="top">la nouvelle MINI.</p>
+                                <p class="bottom blue">maintenant avec 5 portes.</p>                            </div>
+                        </div>
+                        <div id="player-ui" class="right">
+                            <div class="timer"><img class="clock-colon" src="Public/img/colon.jpg" alt=""><img class="clock" id="clock-tens" src="Public/img/clock-0.jpg" alt=""><img class="clock" id="clock-ones" src="Public/img/clock-0.jpg" alt=""></div>
+                            <div class="player-info">
+                                <div class="level">NIVEAU: <span id="levelDisplay"></span></div>
+                                <div class="score">SCORE: <span id="points"></span></div>
+                            </div>
+                        </div>                        <div class="right last">
+                            <div class="share">
+                                <p>PARTAGEZ VOTRE SCORE:</p><a href=""><img src="" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- CLOSE CAROUSEL -->
+
+
+            </div><!-- END HOME PAGE CONTAINER ( namespace )  -->
+
+        </div>
+        <!-- END CLEAR FIX -->
+    </div>
+    <!-- END MAIN CONTAINER HOLDER -->
+    <!-- ALL JAVASCRIPT IMPORTS BELOW -->
+    <script>
+        var MINIStandalone = this.MINIStandalone = {};
+        MINIStandalone.version = '0.0.0';
+    </script>
+
+
+    <script src="Public/js/vendor/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="Public/js/plugin/console.log.js" type="text/javascript" charset="utf-8"></script>
+    <script src="Public/js/vendor/mini.swipe.js"></script>
+    <script src="Public/js/vendor/bootstrap.min.js"></script>
+    <script src="Public/js/SpotTheDifference.js"></script>
+
+    <script>
+
+        var app = new MINIStandalone.SpotTheDifference();
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
