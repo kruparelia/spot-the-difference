@@ -3,21 +3,23 @@
 	'use strict'; 
 	
  var SpotTheDifference = MINIStandalone.SpotTheDifference = (function() {
-  
 	
  function SpotTheDifference() {
-	    
-	    // class globals 
-		this.score = 0;
-		this.username = "";
-		this.numbFound = 0;
-		this.toBeFound = 10;
-		this.startTime = Date.now();
-		this.time = this.startTime;
-		this.finishFunction = function () { };
-		this.incorrectFunction = function () { };
-        // INIT 
-		this.initalize();
+    // class globals 
+    this.saved = false;
+    this.score = 0;
+    this.username = "";
+    this.numbFound = 0;
+    this.toBeFound = 10;
+    this.startTime = Date.now();
+    this.time = this.startTime;
+	this.translations = [];
+	this.language = 'fr';
+	
+    this.finishFunction = function () { };
+    this.incorrectFunction = function () { };
+    // INIT 
+    this.initalize();
   }
   
   
@@ -32,22 +34,38 @@
 		var that = this;
 		
 		
-		setInterval(function () {
-		    that.time = Math.trunc((Date.now() - that.startTime) / 1000);
-		    if (that.time >= 99) that.time = 99;
-		    var ones = 0;
-		    var tens = 0;
-		    if (that.time >= 10) {
-		        ones = String(that.time).charAt(1);
-		        tens = String(that.time).charAt(0);
-		    }
-		    else {
-		        ones = String(that.time).charAt(0);
-		        tens = 0;
-		    }
+		this.translations = [{'en':'BONUS','fr':'BONUS-FR'},{'en':'QUIZ','fr':'QUIZ-FR'},{'en':'FINAL QUIZ','fr':'FINAL QUIZ - fr'}];
+		
+		// BONUS       = this.translations[0][this.language];
+		// QUIZ        = this.translations[1][this.language];
+		// FINAL QUIZ  = this.translations[2][this.language];
+		
+		console.log(this.translations[0][this.language]);
+		console.log(this.translations[1][this.language]);
+		console.log(this.translations[2][this.language]);
+		
+		
+		var levelIntroTime = 2000;
+		var isPaused = true;
+		var timerInterval = setInterval(function () {
+		    if (!isPaused)
+		    {
+		        that.time = Math.trunc((Date.now() - that.startTime) / 1000);
+		        if (that.time >= 99) that.time = 99;
+		        var ones = 0;
+		        var tens = 0;
+		        if (that.time >= 10) {
+		            ones = String(that.time).charAt(1);
+		            tens = String(that.time).charAt(0);
+		        }
+		        else {
+		            ones = String(that.time).charAt(0);
+		            tens = 0;
+		        }
 
-		    $("#clock-ones").attr("src", "Public/img/clock-" + ones + ".jpg");
-		    $("#clock-tens").attr("src", "Public/img/clock-" + tens + ".jpg");
+		        $("#clock-ones").attr("src", "Public/img/clock-" + ones + ".jpg");
+		        $("#clock-tens").attr("src", "Public/img/clock-" + tens + ".jpg");
+		    }
 		}, 100);
 		var gameCarousel = $("#carousel-spot-the-difference");
 		$("#carousel-spot-the-difference").carousel('pause');
@@ -67,11 +85,11 @@
 		        that.numbFound++;
 		        $(".spot[data-id='" + id + "']").each(function () {
 		            $(this).addClass("found");
-		            $(this).css("border", "5px solid white");
 		        });
 		        that.AddPoints();
 		    }
 		    if (that.numbFound == that.toBeFound) {
+		        isPaused = true;
 		        that.finishFunction();
 		    }
 		});
@@ -86,6 +104,7 @@
 		    var correct = $(this).attr("data-correct");
 		    if (correct == "true") {
 		        that.AddPoints();
+		        isPaused = true;
 		        that.finishFunction();
             }
 		    else {
@@ -103,6 +122,10 @@
 		        $("#usernameLabel").text(that.username);
 		        $(gameCarousel).carousel('next');
 		        $(".level").text("1");
+		        setTimeout(function () {
+		            $(gameCarousel).carousel('next');
+		            $("#Modal-StartSpotLevel1").modal("show");
+		        }, levelIntroTime)
             }
 		});
 		$("#HowToPlayButton").click(function () {
@@ -110,10 +133,6 @@
 		});
 
 	    // Level 1 Intro Screen
-		$("#Level1IntroScreen").click(function () {
-		    $(gameCarousel).carousel('next');
-		    $("#Modal-StartSpotLevel1").modal("show");
-        });
 
 	    // Level 1 Spot
 		$("#Start-SpotLevel1").click(function () {
@@ -124,6 +143,7 @@
 		    that.numbFound = 0;
 		    that.toBeFound = 3;
 		    that.finishFunction = function () { $("#Modal-EndSpotLevel1").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-SpotLevel1").click(function () {
 		    $("#Modal-EndSpotLevel1").modal("hide");
@@ -138,6 +158,7 @@
 		    $("#Modal-StartQuizLevel1").modal("hide");
 		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel1").modal("show"); };
 		    that.finishFunction = function () { $("#Modal-EndQuizLevel1").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-QuizLevel1").click(function () {
 		    $("#Modal-EndQuizLevel1").modal("hide");
@@ -153,18 +174,20 @@
 		    that.numbFound = 0;
 		    that.toBeFound = 1;
 		    that.finishFunction = function () { $("#Modal-EndBonusLevel1").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-BonusLevel1").click(function () {
 		    $("#Modal-EndBonusLevel1").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $(".level").text("2");
+		    setTimeout(function () {
+		        $(gameCarousel).carousel('next');
+		        $("#Modal-StartSpotLevel2").modal("show");
+		    }, levelIntroTime)
 		});
 
 	    // Level 2 Intro Screen
-		$("#Level2IntroScreen").click(function () {
-		    $(gameCarousel).carousel('next');
-		    $("#Modal-StartSpotLevel2").modal("show");
-		});
+
 	    // Level 2 Spot
 		$("#Start-SpotLevel2").click(function () {
 		    that.startTime = Date.now();
@@ -174,6 +197,7 @@
 		    that.numbFound = 0;
 		    that.toBeFound = 5;
 		    that.finishFunction = function () { $("#Modal-EndSpotLevel2").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-SpotLevel2").click(function () {
 		    $("#Modal-EndSpotLevel2").modal("hide");
@@ -188,6 +212,7 @@
 		    that.numbFound = 0;
 		    that.toBeFound = 1;
 		    that.finishFunction = function () { $("#Modal-EndBonusLevel2").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-BonusLevel2").click(function () {
 		    $("#Modal-EndBonusLevel2").modal("hide");
@@ -201,18 +226,20 @@
 		    $("#Modal-StartQuizLevel2").modal("hide");
 		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel2").modal("show"); };
 		    that.finishFunction = function () { $("#Modal-EndQuizLevel2").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-QuizLevel2").click(function () {
 		    $("#Modal-EndQuizLevel2").modal("hide");
 		    $(gameCarousel).carousel('next');
 		    $(".level").text("3");
+		    setTimeout(function () {
+		        $(gameCarousel).carousel('next');
+		        $("#Modal-StartSpotLevel3").modal("show");
+		    }, levelIntroTime)
 		});
 
 	    // Level 3 Intro Screen
-		$("#Level3IntroScreen").click(function () {
-		    $(gameCarousel).carousel('next');
-		    $("#Modal-StartSpotLevel3").modal("show");
-		});
+
 	    // Level 3 Spot
 		$("#Start-SpotLevel3").click(function () {
 		    that.startTime = Date.now();
@@ -222,6 +249,7 @@
 		    that.numbFound = 0;
 		    that.toBeFound = 5;
 		    that.finishFunction = function () { $("#Modal-EndSpotLevel3").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-SpotLevel3").click(function () {
 		    $("#Modal-EndSpotLevel3").modal("hide");
@@ -236,6 +264,7 @@
 		    that.numbFound = 0;
 		    that.toBeFound = 1;
 		    that.finishFunction = function () { $("#Modal-EndBonus1Level3").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-Bonus1Level3").click(function () {
 		    $("#Modal-EndBonus1Level3").modal("hide");
@@ -249,6 +278,7 @@
 		    that.numbFound = 0;
 		    that.toBeFound = 1;
 		    that.finishFunction = function () { $("#Modal-EndBonus2Level3").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-Bonus2Level3").click(function () {
 		    $("#Modal-EndBonus2Level3").modal("hide");
@@ -262,6 +292,7 @@
 		    $("#Modal-StartQuizLevel3").modal("hide");
 		    that.incorrectFunction = function () { $("#Modal-IncorrectQuizLevel3").modal("show"); };
 		    that.finishFunction = function () { $("#Modal-EndQuizLevel3").modal("show"); };
+		    isPaused = false;
 		});
 		$("#End-QuizLevel3").click(function () {
 		    $("#Modal-EndQuizLevel3").modal("hide");
@@ -273,20 +304,25 @@
 	    // Summary Page
 		$("#SubmitToLeaderboard").click(function () {
 		    var initialText = $(this).text();
-		    $(this).text("Loading");
-		    $(this).prop("disabled", true);
-		    $.ajax({
-		        url: "http://php.richmondday.com/mini.ca/spot-the-difference-api/Save.php?User=" + that.username + "&Score=" + that.score, type: "POST",
-		        success: function () {
-		            that.GetLeaderboardData();
-		            $(gameCarousel).carousel('next');
-		        },
-		        error: function (jqXHR, textStatus, errorThrown) {
-		            //alert(jqXHR.responseText + ": " + textStatus + ". " + errorThrown);
-		            $(this).prop("disabled", false);
-		            $(this).text(initialText);
-		        }
-		    });
+		    $("#SubmitToLeaderboard").text("Loading");
+		    $("#SubmitToLeaderboard").prop("disabled", true);
+		    if (!that.saved)
+		    {
+		        that.saved = true;
+		        $.ajax({
+		            url: "http://php.richmondday.com/mini.ca/spot-the-difference-api/Save.php?User=" + that.username + "&Score=" + that.score, type: "POST",
+		            success: function () {
+		                that.GetLeaderboardData();
+		                $(gameCarousel).carousel('next');
+		            },
+		            error: function (jqXHR, textStatus, errorThrown) {
+		                //alert(jqXHR.responseText + ": " + textStatus + ". " + errorThrown);
+		                $("#SubmitToLeaderboard").prop("disabled", false);
+		                $(this).text(initialText);
+		                that.saved = false;
+		            }
+		        });
+		    }
 		});
 		$("#SkipAhead").click(function () {
 		    that.GetLeaderboardData();
